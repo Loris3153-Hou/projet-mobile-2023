@@ -16,19 +16,18 @@ Le but sera d'avoir compléter un maximum de niveaux
 
 # Technologies requises
 
-Architecture imposée : Cordova
-  - Architecture MVC + DAO 
+- Architecture imposée : Cordova
+    Architecture MVC + DAO 
 
-1 Gesture au choix 
-swipe, pinch, double-tap, etc. (autre que tap ou inclus dans Google Map)
+- 1 Gesture au choix 
+    swipe
 
-Données distantes au choix (au moins 2)
-Service de données XML ou JSON**
+- Données distantes au choix (au moins 2)
+    Service de données XML ou JSON**
 
-Librairie graphique externe au choix 
-JavaScript (greensock) 
+- Librairie graphique externe au choix 
+    JavaScript (greensock) 
 
-
-1 Composant de l’appareil au choix
-  - photos enregistrées
+- 1 Composant de l’appareil au choix
+    photos enregistrées
 
