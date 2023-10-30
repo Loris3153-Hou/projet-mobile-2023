@@ -19,15 +19,15 @@ Le but sera d'avoir compléter un maximum de niveaux
 - Architecture imposée : Cordova
     Architecture MVC + DAO 
 
-- 1 Gesture au choix 
+- 1 Gesture au choix : 
     swipe
 
-- Données distantes au choix (au moins 2)
+- Données distantes au choix (au moins 2) : 
     Service de données XML ou JSON**
 
-- Librairie graphique externe au choix 
+- Librairie graphique externe au choix : 
     JavaScript (greensock) 
 
-- 1 Composant de l’appareil au choix
+- 1 Composant de l’appareil au choix : 
     photos enregistrées
 
