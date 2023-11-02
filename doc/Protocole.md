@@ -12,4 +12,4 @@ Le client ajoute son pseudo et un user est inserer coté serveur.
 
 updateUser(pseudo)
 
-Le client changee son pseudo et le user correspondantest update coté serveur.
+Le client change son pseudo et le user correspondantest update coté serveur.
