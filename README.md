@@ -3,10 +3,12 @@ projet-mobile-2023-Loris3153-Hou created by GitHub Classroom
 
 # Sujet et but : 
 
-Faire un jeu ou le but sera de mémoriser des séquences. Ces séquances seront progressive en s'incrementant de 1 à chaque niveau. 
-Les séquences à retenir seront representé par des cartes blanches et qui seront remplacer par une image en sequence (Avec ses propres images)
+Faire un jeu dont le but sera de mémoriser des séquences. Ces séquances seront progressives en s'incrementant de 1 à chaque niveau. 
+Les séquences à retenir seront representées par des cartes qui seront remplacées par une image en séquence (avec les propres images de l'utilisateur ou avec des themes d'images préenregistrées).
 
-Le but sera d'avoir compléter un maximum de niveaux 
+Le but sera de compléter un maximum de niveaux. (D'avoir retenu la plus grande séquence possible)
+
+Les résultats de chaque joueur seront enregistrés dans une base de données et affichés en fin de partie avec les pseudos des joueurs sous forme de classement. (seuls les 50 premiers seront affichés)
 
 # Fonctionnalités : 
 
