@@ -12,9 +12,14 @@ Les résultats de chaque joueur seront enregistrés dans une base de données et
 
 # Fonctionnalités : 
 
--
--
--
+- Choix d'un pseudo
+- Choix d'un thème
+- Créer un thème personnalisé
+- Jouer au jeu
+- Accéder aux paramètres
+- Visualiser son score
+- Visualiser le classement
+
 
 # Technologies requises
 
