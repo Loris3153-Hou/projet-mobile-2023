@@ -4,6 +4,8 @@ Le client envoi l'identifiant au serveur, le serveur émet une requête SELECT �
 
 getListScore()
 
+Le client envoi une requête pour récupérer un JSON de la liste de score, le serveur émet une requête SELECT à la base de donnée pour récupérer la liste des pseudo avec le meilleur score associé à chaque pseudo et retourne un objet JSON.
+
 insertUser(pseudo)
 
 updateUser(pseudo)
