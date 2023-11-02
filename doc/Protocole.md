@@ -8,8 +8,8 @@ Le client envoi une requête pour récupérer un JSON de la liste de score, le s
 
 insertUser(pseudo)  
 
-Le client ajoute son pseudo et un user est inserer coté serveur.
+Le client ajoute son pseudo et un user est insérer coté serveur.
 
 updateUser(pseudo)
 
-Le client change son pseudo et le user correspondantest update coté serveur.
+Le client change son pseudo et le user correspondant est update coté serveur.
