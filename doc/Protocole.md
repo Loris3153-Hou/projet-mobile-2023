@@ -6,6 +6,10 @@ getListScore()
 
 Le client envoi une requête pour récupérer un JSON de la liste de score, le serveur émet une requête SELECT à la base de donnée pour récupérer la liste des pseudo avec le meilleur score associé à chaque pseudo et retourne un objet JSON.
 
-insertUser(pseudo)
+insertUser(pseudo)  
+
+Le client ajoute son pseudo et un user est inserer coté serveur.
 
 updateUser(pseudo)
+
+Le client changee son pseudo et le user correspondantest update coté serveur.
