@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 33vh 34vh 33vh;
+    background-color: black;
+}
+
+.titre{
+    grid-area: 1 / 2 / 2 / 3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+}
+
+.titre1{
+    color: blue;
+}
+
+.titre2{
+    color: yellow;
+}
+
+.titre3{
+    color: red;
+}
+
+.chargement-ecran-de-chargement{
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.image-ecran-de-chargement{
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+}
+.carres-ecran-de-chargement{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.carre-ecran-de-chargement{
+    height: 22%;
+    width: 22%;
+    margin: 5%;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#carre1{
+    animation: changerCouleur1 2s ease infinite;
+}
+
+#carre2{
+    animation: changerCouleur2 2s ease infinite;
+}
+
+#carre3{
+    animation: changerCouleur3 2s ease infinite;
+}
+
+#carre4{
+    animation: changerCouleur2 2s ease infinite;
+}
+
+#carre5{
+    animation: changerCouleur3 2s ease infinite;
+}
+
+#carre6{
+    animation: changerCouleur4 2s ease infinite;
+}
+
+#carre7{
+    animation: changerCouleur3 2s ease infinite;
+}
+
+#carre8{
+    animation: changerCouleur4 2s ease infinite;
+}
+
+#carre9{
+    animation: changerCouleur5 2s ease infinite;
+}
+
+
+@keyframes changerCouleur1 {
+    0% {
+        background-color: #ffffff;
+    }
+    25% {
+        background-color: #d0cfcf;
+    }
+    50% {
+        background-color: #949494;
+    }
+    75% {
+        background-color: #505050;
+    }
+    100% {
+        background-color: #343434;
+    }
+}
+@keyframes changerCouleur2 {
+    0% {
+        background-color: #343434;
+    }
+    25% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #d0cfcf;
+    }
+    75% {
+        background-color: #949494;
+    }
+    100% {
+        background-color: #505050;
+    }
+}
+
+@keyframes changerCouleur3 {
+    0% {
+        background-color: #505050;
+    }
+    25% {
+
+        background-color: #343434;
+    }
+    50% {
+
+        background-color: #ffffff;
+    }
+    75% {
+
+        background-color: #d0cfcf;
+    }
+    100% {
+
+        background-color: #949494;
+    }
+}
+
+@keyframes changerCouleur4 {
+    0% {
+        background-color: #949494;
+    }
+    25% {
+        background-color: #505050;
+    }
+    50% {
+
+        background-color: #343434;
+    }
+    75% {
+
+        background-color: #d0cfcf;
+    }
+    100% {
+        background-color: #d0cfcf;
+    }
+}
+
+@keyframes changerCouleur5 {
+    0% {
+        background-color: #d0cfcf;
+    }
+    25% {
+        background-color: #949494;
+    }
+    50% {
+        background-color: #505050;
+    }
+    75% {
+
+        background-color: #343434;
+    }
+    100% {
+
+        background-color: #ffffff;
+    }
+}
