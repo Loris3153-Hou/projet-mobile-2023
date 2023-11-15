@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Krona One';
+    src: url('font/Krona_One/KronaOne-Regular.ttf')  format('truetype');
+}
+
+.titre {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.label-parametres-depart-ecran-accueil {
+    color: #FFF;
+    font-family: Krona One;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#input-text-pseudo {
+    width: 300px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.38);
+    font-family: Krona One;
+}
+
+html {
+    background-color: black;
+    width: 390px;
+    height: 844px;
+}
+
+.div-themes {
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.38);
+    width: 139px;
+    height: 151px;
+    flex-shrink: 0;
+}
+
+#div-choix-theme {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#div-theme-bleu {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+#div-theme-rouge {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+#div-theme-vert {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: rgba(217, 217, 217, 0.78);
+}
+#div-theme-personnalisable { grid-area: 2 / 2 / 3 / 3; }
+
+#bouton-jouer-ecran-accueil {
+    width: 185px;
+    height: 51px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FBFF27;
+    font-family: Krona One;
+}
+
+#div-carte-1-theme-bleu { grid-area: 1 / 1 / 2 / 2; background: #97AEFF; }
+#div-carte-2-theme-bleu { grid-area: 1 / 2 / 2 / 3; background: #4EBFFF; }
+#div-carte-3-theme-bleu { grid-area: 1 / 3 / 2 / 4; background: #0176FF; }
+#div-carte-4-theme-bleu { grid-area: 2 / 1 / 3 / 2; background: #5F83C9; }
+#div-carte-5-theme-bleu { grid-area: 2 / 2 / 3 / 3; background: #1B7BB0; }
+#div-carte-6-theme-bleu { grid-area: 2 / 3 / 3 / 4; background: #1F6E87; }
+#div-carte-7-theme-bleu { grid-area: 3 / 1 / 4 / 2; background: #008FCC; }
+#div-carte-8-theme-bleu { grid-area: 3 / 2 / 4 / 3; background: #2EF2FF; }
+#div-carte-9-theme-bleu { grid-area: 3 / 3 / 4 / 4; background: #00599A; }
+
+#div-carte-1-theme-rouge { grid-area: 1 / 1 / 2 / 2; background: #FF4242; }
+#div-carte-2-theme-rouge { grid-area: 1 / 2 / 2 / 3; background: #C61414; }
+#div-carte-3-theme-rouge { grid-area: 1 / 3 / 2 / 4; background: #8C2424; }
+#div-carte-4-theme-rouge { grid-area: 2 / 1 / 3 / 2; background: #7E1919; }
+#div-carte-5-theme-rouge { grid-area: 2 / 2 / 3 / 3; background: #9A0606; }
+#div-carte-6-theme-rouge { grid-area: 2 / 3 / 3 / 4; background: #FE5757; }
+#div-carte-7-theme-rouge { grid-area: 3 / 1 / 4 / 2; background: #A60000; }
+#div-carte-8-theme-rouge { grid-area: 3 / 2 / 4 / 3; background: #BB0505; }
+#div-carte-9-theme-rouge { grid-area: 3 / 3 / 4 / 4; background: #EF3838; }
+
+#div-carte-1-theme-vert { grid-area: 1 / 1 / 2 / 2; background: #0AFF22; }
+#div-carte-2-theme-vert { grid-area: 1 / 2 / 2 / 3; background: #84FF90; }
+#div-carte-3-theme-vert { grid-area: 1 / 3 / 2 / 4; background: #30B900; }
+#div-carte-4-theme-vert { grid-area: 2 / 1 / 3 / 2; background: #00AB11; }
+#div-carte-5-theme-vert { grid-area: 2 / 2 / 3 / 3; background: #40A63D; }
+#div-carte-6-theme-vert { grid-area: 2 / 3 / 3 / 4; background: #317819; }
+#div-carte-7-theme-vert { grid-area: 3 / 1 / 4 / 2; background: #2EAF00; }
+#div-carte-8-theme-vert { grid-area: 3 / 2 / 4 / 3; background: #84FF58; }
+#div-carte-9-theme-vert { grid-area: 3 / 3 / 4 / 4; background: #ACFF8E; }
+
+.div-cartes-ecran-accueil {
+    width: 24px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 5px;
+}
