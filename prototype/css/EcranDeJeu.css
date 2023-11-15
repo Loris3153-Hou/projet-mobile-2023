@@ -1,25 +1,48 @@
+@font-face {
+    font-family: 'Krona One';
+    src: url('font/Krona_One/KronaOne-Regular.ttf')  format('truetype');
+}
+
 body{
     background-color: black;
-
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 #score-ecran-de-jeu{
     color: #FFF;
     font-family: Krona One;
-    font-size: 10em;
+    font-size: 8em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    margin-top: 17vh;
 }
 
 .titre{
     color: white;
     font-family: Krona One;
-    font-size: 130px;
+    font-size: 6em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+
+.titre1{
+    color: blue;
+}
+
+.titre2{
+    color: yellow;
+}
+
+.titre3{
+    color: red;
 }
 
 .neuf-carre-ecran-de-jeu{
@@ -33,9 +56,11 @@ body{
 .carre-ecran-de-jeu{
     border-radius: 10px;
     background: #0AFF22;
-    height: 200px;
-    width: 200px;
-    height: 7vh;
-    width: 7vh;
+    height: 10vh;
+    width: 10vh;
     margin: 2vh;
+}
+
+.pas-carre-du-haut-ecran-de-jeu{
+    margin-top: 4vh;
 }
