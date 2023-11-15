@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+
+}
+#score-ecran-de-jeu{
+    color: #FFF;
+    font-family: Krona One;
+    font-size: 10em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.titre{
+    color: white;
+    font-family: Krona One;
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.neuf-carre-ecran-de-jeu{
+    text-align: center;
+}
+
+.colonne-ecran-de-jeu{
+    display: inline-block;
+}
+
+.carre-ecran-de-jeu{
+    border-radius: 10px;
+    background: #0AFF22;
+    height: 200px;
+    width: 200px;
+    height: 7vh;
+    width: 7vh;
+    margin: 2vh;
+}
