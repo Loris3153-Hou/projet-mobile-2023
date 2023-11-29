@@ -1,5 +1,6 @@
 class VueScore {
     constructor(){
+        this.html = document.getElementById("html-vue-score").innerHTML;
         this.score = 26;
         this.listeVingtPremiersNomsJoueurs = ["louis", "carolle", "jean", "fanny", "edwardo", "elinadu53"];
         this.listeVingtPremiersScoreJoueurs = [48, 36, 25, 18, 15, 9];
@@ -32,6 +33,11 @@ class VueScore {
 
         listeClassementJoueurs.innerHTML = listeClassementJoueursHTMLRemplacement;
 
+    }
+    afficher(){
+        document.getElementsByTagName("body")[0].innerHTML = this.html;
+        this.afficherScoresVingtPremiersJoueurs();
+        this.afficherScoreJoueurCourant();
     }
 
 }

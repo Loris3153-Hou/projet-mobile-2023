@@ -3,8 +3,220 @@
 <head>
     <meta content="text/html;charset=UTF-8">
     <title>Document</title>
+    <script src="js/VueScore.js"></script>
+    <script src="js/VueJeu.js"></script>
+    <script src="js/VueParametre.js"></script>
+    <script src="js/VuePersonnalisationJeu.js"></script>
+    <script src="js/VueAccueilJeu.js"></script>
+    <script defer src="Application.js"></script>
 </head>
 <body>
+<div id="page-chargement-application">
+    <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+    <div class="image-ecran-de-chargement">
+        <div class="carres-ecran-de-chargement">
+            <div id="carre1" class="carre-ecran-de-chargement"></div>
+            <div id="carre2" class="carre-ecran-de-chargement"></div>
+            <div id="carre3" class="carre-ecran-de-chargement"></div>
+            <div id="carre4" class="carre-ecran-de-chargement"></div>
+            <div id="carre5" class="carre-ecran-de-chargement"></div>
+            <div id="carre6" class="carre-ecran-de-chargement"></div>
+            <div id="carre7" class="carre-ecran-de-chargement"></div>
+            <div id="carre8" class="carre-ecran-de-chargement"></div>
+            <div id="carre9" class="carre-ecran-de-chargement"></div>
+        </div>
+    </div>
+    <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
+</div>
+<script type="plain/text" id="html-vue-jeu">
+    <link href="css/EcranDeJeu.css" rel="stylesheet">
+    <div class="page">
+    <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+    <div class="neuf-carre-ecran-de-jeu">
+        <div class="colonne-ecran-de-jeu" id="colonne-gauche-ecran-de-jeu">
+            <div class="carre-ecran-de-jeu"></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" ></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+        </div>
+        <div class="colonne-ecran-de-jeu" id="colonne-du-milieu-ecran-de-jeu">
+            <div class="carre-ecran-de-jeu"></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+        </div>
+        <div class="colonne-ecran-de-jeu" id="colonne-droite-ecran-de-jeu">
+            <div class="carre-ecran-de-jeu"></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+        </div>
+    </div>
+    <p id = "score-ecran-de-jeu">
+        15
+    </p>
+    </div>
+</script>
 
+<script type="plain/text" id="html-vue-parametre">
+    <link href="css/EcranParametre.css" rel="stylesheet">
+    <div class="page">
+        <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+
+    <h1 class="para-ecran-parametre">Paramètres</h1>
+    <div class="son-ecran-parametre">
+        <h1>Son</h1>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'>
+    <input class='rejouer-ecran-parametre' type='submit' name='sub' value='Rejouer'>
+    <div class="niveau-ecran-parametre">
+        <h1 class="titre">15</h1>
+    </div>
+    <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
+    </div>
+</script>
+
+<script type="plain/text" id="html-vue-personnalisation-jeu">
+    <link href="css/EcranPersonnalisationDuJeu.css" rel="stylesheet">
+    <div class="page">
+        <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+    <div class="neuf-carre-ecran-personnalisation-jeu">
+        <div class="colonne-ecran-personnalisation-jeu" id="colonne-gauche-ecran-personnalisation-jeu">
+            <div class="carre-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu" >
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+        </div>
+        <div class="colonne-ecran-personnalisation-jeu" id="colonne-du-milieu-ecran-personnalisation-jeu">
+            <div class="carre-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+        </div>
+        <div class="colonne-ecran-personnalisation-jeu" id="colonne-droite-ecran-personnalisation-jeu">
+            <div class="carre-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+            <div class="carre-ecran-personnalisation-jeu pas-carre-du-haut-ecran-personnalisation-jeu">
+                <img src="images/image_galerie.png">
+            </div>
+        </div>
+    </div>
+    <div class ="bouton-enregistrer-ecran-personnalisation-jeu">
+        <button id = "enregistrer-ecran-personnalisation-jeu" onclick="location.href='#';">
+            <p id="texte-button-enregistrer-ecran-personnalisation-jeu">Enregistrer</p>
+        </button>
+    </div>
+    </div>
+</script>
+
+<script type="plain/text" id="html-vue-score">
+    <link href="css/EcranScore.css" rel="stylesheet">
+
+    <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+
+<h1 class="score-ecran-score">Score</h1>
+<div class="niveau-ecran-score">
+    <h1 id="score-joueur-courant"></h1>
+</div>
+<input class='rejouer-ecran-score' type='submit' name='sub' value='Rejouer' width="300" height="100" onclick="location.href='#jeu';">
+<div class="image-ecran-score">
+    <img src="images/podium.png" width="1000" height="1000">
+</div>
+<div class="lepodium-ecran-score">
+    <div id="premier-joueur-podium">
+        {scoreJoueur1}
+    </div>
+    <div class="podium-ecran-score" id="autres-joueurs-podium">
+        <div id="deuxieme-joueur-podium">
+            {scoreJoueur2}
+        </div>
+        <div id="troisieme-joueur-podium">
+            {scoreJoueur3}
+        </div>
+    </div>
+</div>
+<div class="autres-ecran-score" id="classement-joueurs">
+    <div class="autre-ecran-score">
+        <h1>{score-joueur-classement}</h1><p>{nom-joueur-classement}</p>
+    </div>
+</div>
+
+</script>
+
+<script type="plain/text" id="html-vue-accueil-jeu">
+    <link rel="stylesheet" href="css/pageAccueilJeu.css">
+    <div class="page">
+    <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+
+    <form method="post">
+
+        <p class="label-parametres-depart-ecran-accueil">Pseudo</p>
+
+        <input id="input-text-pseudo" type="text" name="pseudoJoueur" value="joueurXX">
+
+        <p class="label-parametres-depart-ecran-accueil">Theme</p>
+
+        <div id="div-choix-theme">
+            <div id="div-theme-bleu" class="div-themes">
+                <div id="div-carte-1-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-2-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-3-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-4-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-5-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-6-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-7-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-8-theme-bleu" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-9-theme-bleu" class="div-cartes-ecran-accueil"></div>
+            </div>
+            <div id="div-theme-rouge" class="div-themes">
+                <div id="div-carte-1-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-2-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-3-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-4-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-5-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-6-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-7-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-8-theme-rouge" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-9-theme-rouge" class="div-cartes-ecran-accueil"></div>
+            </div>
+            <div id="div-theme-vert" class="div-themes">
+                <div id="div-carte-1-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-2-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-3-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-4-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-5-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-6-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-7-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-8-theme-vert" class="div-cartes-ecran-accueil"></div>
+                <div id="div-carte-9-theme-vert" class="div-cartes-ecran-accueil"></div>
+            </div>
+            <div id="div-theme-personnalisable" class="div-themes">
+                <img src="images/image_galerie.png" width="100%"  onclick="location.href='#perso';">
+            </div>
+        </div>
+
+        <div class="conteneur-bouton">
+            <input id="bouton-jouer-ecran-accueil" type="submit" name="boutonJouer" value="Jouer" onclick="location.href='#jeu';">
+        </div>
+    </form>
+
+    </div>
+</script>
 </body>
 </html>
