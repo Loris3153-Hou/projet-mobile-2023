@@ -26,7 +26,7 @@ class VueScore {
 
         for(var i = 3; i < this.listeVingtPremiersScoreJoueurs.length; i++){
             let listeClassementJoueursItemHTMLRemplacement = listeClassementJoueursItemHTML;
-            listeClassementJoueursItemHTMLRemplacement = listeClassementJoueursItemHTMLRemplacement.replace("{score-joueur-classement}", this.listeVingtPremiersScoreJoueurs[i]);
+            listeClassementJoueursItemHTMLRemplacement = listeClassementJoueursItemHTMLRemplacement.replace("{score-joueur-classement}",i+1 + "- " + this.listeVingtPremiersScoreJoueurs[i]);
             listeClassementJoueursItemHTMLRemplacement = listeClassementJoueursItemHTMLRemplacement.replace("{nom-joueur-classement}", this.listeVingtPremiersNomsJoueurs[i]);
             listeClassementJoueursHTMLRemplacement += listeClassementJoueursItemHTMLRemplacement;
         }
