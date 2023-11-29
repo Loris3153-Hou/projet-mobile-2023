@@ -3,11 +3,12 @@
 <head>
     <meta content="text/html;charset=UTF-8">
     <title>Document</title>
-    <script src="js/VueAccueilJeu.js"></script>
-    <script src="js/VuePersonnalisationJeu.js"></script>
-    <script src="js/VueJeu.js"></script>
-    <script src="js/VueParametre.js"></script>
-    <script src="js/VueScore.js"></script>
+
+    <script src="vue/VueAccueilJeu.js"></script>
+    <script src="vue/VuePersonnalisationJeu.js"></script>
+    <script src="vue/VueJeu.js"></script>
+    <script src="vue/VueParametre.js"></script>
+    <script src="vue/VueScore.js"></script>
     <script defer src="Application.js"></script>
 </head>
 <body>
@@ -49,9 +50,7 @@
             <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
         </div>
     </div>
-    <p id = "score-ecran-de-jeu">
-        15
-    </p>
+    <p id = "score-ecran-de-jeu"></p>
     </div>
 </script>
 
@@ -72,7 +71,7 @@
     <input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'>
     <input class='rejouer-ecran-parametre' type='submit' name='sub' value='Rejouer'>
     <div class="niveau-ecran-parametre">
-        <h1 class="titre">15</h1>
+        <h1 class="titre" id="score-ecran-parametre"></h1>
     </div>
     <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
     </div>

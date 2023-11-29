@@ -22,7 +22,7 @@ class Application {
         }else if(hash.match(/^#jeu/)){
 
             this.vueJeu.afficher();
-            let urlSansFragment = window.location.href.split('#')[0];
+            this.window.location.hash = "#";
             window.location.href = urlSansFragment + "#score";
             setTimeout(() =>this.naviguer(), 5000);
 
