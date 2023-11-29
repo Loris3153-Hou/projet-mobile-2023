@@ -7,7 +7,7 @@ class Application {
         this.vueScore= vueScore;
         this.vueParametre= vueParametre;
 
-        document.addEventListener('hashchange', () =>this.naviguer());
+        this.window.addEventListener('hashchange', () =>this.naviguer());
 
         this.naviguer();
         //setTimeout(() =>this.naviguer(), 3000);
@@ -15,7 +15,7 @@ class Application {
 
     naviguer(){
         let hash = window.location.hash;
-        console.log(hash);
+        console.log("naviger :" + hash);
         if(!hash){
             this.vueAccueilJeu.afficher();
 
@@ -37,7 +37,12 @@ class Application {
         }
         else if (hash.match(/^#perso/)){
             this.vuePersonnalisationJeu.afficher();
+            console.log("#perso");
         }
+    }
+
+    actionAllerPagePersonnalisationJeu(){
+        this.window.location.hash = "#perso";
     }
 }
 
