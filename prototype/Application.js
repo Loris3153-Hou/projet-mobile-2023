@@ -24,7 +24,7 @@ class Application {
             this.vueJeu.afficher();
             let urlSansFragment = window.location.href.split('#')[0];
             //window.location.href = urlSansFragment + "#score";
-            //setTimeout(() =>this.naviguer(), 5000);
+            setTimeout(() =>this.naviguer(), 5000);
 
         }else if (hash.match(/^#parametre/)){
 
