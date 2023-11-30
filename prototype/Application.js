@@ -23,8 +23,8 @@ class Application {
 
             this.vueJeu.afficher();
             let urlSansFragment = window.location.href.split('#')[0];
-            window.location.href = urlSansFragment + "#score";
-            setTimeout(() =>this.naviguer(), 5000);
+            //window.location.href = urlSansFragment + "#score";
+            //setTimeout(() =>this.naviguer(), 5000);
 
         }else if (hash.match(/^#parametre/)){
 
@@ -37,7 +37,6 @@ class Application {
         }
         else if (hash.match(/^#perso/)){
             this.vuePersonnalisationJeu.afficher();
-            console.log("#perso");
         }
     }
 

@@ -52,12 +52,12 @@
         </div>
     </div>
     <p id = "score-ecran-de-jeu"></p>
+    <a href="#parametre"><button width="150" height="50">Parametre</button></a>
     </div>
 </script>
 
 <script type="plain/text" id="html-vue-parametre">
     <link href="css/EcranParametre.css" rel="stylesheet">
-    <div class="page">
         <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
 
     <h1 class="para-ecran-parametre">Paramètres</h1>
@@ -75,7 +75,7 @@
         <h1 class="titre" id="score-ecran-parametre"></h1>
     </div>
     <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
-    </div>
+
 </script>
 
 <script type="plain/text" id="html-vue-personnalisation-jeu">
@@ -122,6 +122,7 @@
             <p id="texte-button-enregistrer-ecran-personnalisation-jeu">Enregistrer</p>
         </button>
     </div>
+
     </div>
 </script>
 
@@ -134,9 +135,7 @@
 <div class="niveau-ecran-score">
     <h1 id="score-joueur-courant"></h1>
 </div>
-<form class='rejouer-form' method="post">
-<input class='rejouer-ecran-score' type='submit' name='sub' value='Rejouer' width="300" height="100" onclick="location.href='#jeu';">
-</form>
+<a href="#jeu" class="rejouer-form"><button class='rejouer-ecran-score' value='Rejouer' width="300" height="100">Rejouer</button></a>
 <div class="image-ecran-score">
     <img src="images/podium.png" width="1000" height="1000">
 </div>

@@ -115,3 +115,7 @@ body {
     gap: 30%;
     font-size: 25px;
 }
+img{
+    z-index: -2;
+}
+
