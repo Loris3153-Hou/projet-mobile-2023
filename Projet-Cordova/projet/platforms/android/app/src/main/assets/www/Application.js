@@ -6,7 +6,7 @@ class Application {
         this.vuePersonnalisationJeu = vuePersonnalisationJeu;
         this.vueScore= vueScore;
 
-        this.vueJeu.initialiserActionAllerVersPageScore(() =>this.allerVersPageScore());
+        this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
 
         this.window.addEventListener('hashchange', () =>this.naviguer());
 
@@ -38,7 +38,8 @@ class Application {
         }
     }
 
-    allerVersPageScore(){
+    allerVersPageScore(score){
+        this.vueScore.recupererScoreJoueurCourant(score);
         this.window.location.hash = "#score";
     }
 

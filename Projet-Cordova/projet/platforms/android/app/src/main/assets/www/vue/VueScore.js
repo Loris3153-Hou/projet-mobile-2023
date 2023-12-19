@@ -1,13 +1,13 @@
 class VueScore {
     constructor(){
         this.html = document.getElementById("html-vue-score").innerHTML;
-        this.score = 26;
+        this.score = 0;
         this.listeVingtPremiersNomsJoueurs = ["louis", "carolle", "jean", "fanny", "edwardo", "elinadu53"];
         this.listeVingtPremiersScoreJoueurs = [48, 36, 25, 18, 15, 9];
     }
 
-    afficherScoreJoueurCourant(){
-        document.getElementById("score-joueur-courant").innerHTML = this.score;
+    recupererScoreJoueurCourant(score){
+        this.score = score;
     }
 
     afficherScoresVingtPremiersJoueurs(){
@@ -37,7 +37,7 @@ class VueScore {
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
         this.afficherScoresVingtPremiersJoueurs();
-        this.afficherScoreJoueurCourant();
+        document.getElementById("score-joueur-courant").innerHTML = this.score;
     }
 
 }

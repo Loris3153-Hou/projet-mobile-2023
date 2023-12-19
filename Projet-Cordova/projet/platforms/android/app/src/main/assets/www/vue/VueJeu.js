@@ -39,7 +39,7 @@ class VueJeu {
             }
         }
         else {
-            this.actionAllerVersPageScore();
+            this.actionAllerVersPageScore(this.score);
         }
     }
 
