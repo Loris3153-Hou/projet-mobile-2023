@@ -3,7 +3,7 @@ class KliquencerieDAO {
         var xhr = new XMLHttpRequest();
 
         // Remplacez l'URL de votre API et de votre frontend
-        var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?joueur=1';
+        var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?joueur=1&token=valeurAuthentification';
         var frontendUrl = 'https://localhost/index.html';
 
         xhr.open('GET', apiUrl, true);
