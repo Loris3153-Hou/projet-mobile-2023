@@ -2,9 +2,11 @@
 <html lang=fr>
 <head>
     <meta content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:; connect-src 'self' https://149.202.53.74 http://149.202.53.74;">
     <title>Document</title>
     <link rel="stylesheet" href="css/pageAccueilJeu.css">
-
+    <script src="model/Joueur.js"></script>
+    <script src="DAO/KliquencerieDAO.js"></script>
     <script src="vue/VueAccueilJeu.js"></script>
     <script src="vue/VuePersonnalisationJeu.js"></script>
     <script src="vue/VueJeu.js"></script>
@@ -220,3 +222,23 @@
 </script>
 </body>
 </html>
+
+<script>
+
+    /*const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === this.DONE) {
+        console.log("reponse du serveur : " + this.responseText);
+      }
+    });
+
+    xhr.open("GET", "https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php");
+
+    xhr.send();*/
+
+    kliquencerieDAO = new KliquencerieDAO();
+    kliquencerieDAO.test()
+
+</script>
