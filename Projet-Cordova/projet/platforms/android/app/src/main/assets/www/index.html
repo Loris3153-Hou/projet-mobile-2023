@@ -3,7 +3,8 @@
 <head>
     <meta content="text/html;charset=UTF-8">
     <title>Document</title>
-
+    <script src="model/Joueur.js"></script>
+    <script src="DAO/KliquencerieDAO.js"></script>
     <script src="vue/VueAccueilJeu.js"></script>
     <script src="vue/VuePersonnalisationJeu.js"></script>
     <script src="vue/VueJeu.js"></script>
@@ -316,5 +317,9 @@
 
 
 
+</script>
+<script>
+    joueurDAO = new KliquencerieDAO()
+    joueurDAO.test()
 </script>
 </html>
