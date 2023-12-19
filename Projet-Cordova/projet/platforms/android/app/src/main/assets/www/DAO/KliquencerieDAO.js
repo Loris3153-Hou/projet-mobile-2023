@@ -4,7 +4,7 @@ class KliquencerieDAO {
         this.token = "valeurAuthentification";
     }
 
-    test() {
+    retournerLesVingtMeilleursScores() {
         var xhr = new XMLHttpRequest();
 
         // Remplacez l'URL de votre API et de votre frontend

@@ -16,7 +16,6 @@ if (isset($_GET["token"])){
 
             $utilisateur = $utilisateurDAO->getToutesJoueur();
             $util = json_encode($utilisateur);
-            //$html .= $utilisateur[0]->getIdJoueur() . $utilisateur[0]->getPseudoJoueur() . $utilisateur[0]->getMeilleurScoreJoueur();
 
             echo $util;
         }
