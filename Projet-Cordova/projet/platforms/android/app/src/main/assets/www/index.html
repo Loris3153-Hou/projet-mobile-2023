@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
-<html lang=fr>
+<html lang=fr id="html">
 <head>
     <meta content="text/html;charset=UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/pageAccueilJeu.css">
 
     <script src="vue/VueAccueilJeu.js"></script>
     <script src="vue/VuePersonnalisationJeu.js"></script>
@@ -31,49 +30,51 @@
     <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
 </div>
 <script type="plain/text" id="html-vue-jeu">
-    <link href="css/EcranDeJeu.css" rel="stylesheet">
-    <div class="page">
-    <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
-    <div class="neuf-carre-ecran-de-jeu">
-        <div class="colonne-ecran-de-jeu" id="colonne-gauche-ecran-de-jeu">
-            <div class="carre-ecran-de-jeu"></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" ></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
-        </div>
-        <div class="colonne-ecran-de-jeu" id="colonne-du-milieu-ecran-de-jeu">
-            <div class="carre-ecran-de-jeu"></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
-        </div>
-        <div class="colonne-ecran-de-jeu" id="colonne-droite-ecran-de-jeu">
-            <div class="carre-ecran-de-jeu"></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
-            <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu"></div>
+    <div id="pageJeu" ontouchstart="p1DemarerTouche(event)" ontouchmove="p1BougerTouche(event)" ontouchend="p1TerminerTouche(event)">
+        <link href="css/EcranDeJeu.css" rel="stylesheet">
+        <div class="page">
+            <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+            <div class="neuf-carre-ecran-de-jeu">
+                <div class="colonne-ecran-de-jeu" id="colonne-gauche-ecran-de-jeu">
+                    <div class="carre-ecran-de-jeu" id="carte1"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte2"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte3"></div>
+                </div>
+                <div class="colonne-ecran-de-jeu" id="colonne-du-milieu-ecran-de-jeu">
+                    <div class="carre-ecran-de-jeu" id="carte4"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte5"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte6"></div>
+                </div>
+                <div class="colonne-ecran-de-jeu" id="colonne-droite-ecran-de-jeu">
+                    <div class="carre-ecran-de-jeu" id="carte7"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte8"></div>
+                    <div class="carre-ecran-de-jeu pas-carre-du-haut-ecran-de-jeu" id="carte9"></div>
+                </div>
+            </div>
+            <p id = "score-ecran-de-jeu"></p>
+            <a href="#parametre"><button width="150" height="50">Parametre</button></a>
+            <a href="#score"><button width="150" height="50">Score</button></a>
         </div>
     </div>
-    <p id = "score-ecran-de-jeu"></p>
-    <a href="#parametre"><button width="150" height="50">Parametre</button></a>
-    <a href="#score"><button width="150" height="50">Score</button></a>
-    </div>
-</script>
 
-<script type="plain/text" id="html-vue-parametre">
-    <link href="css/EcranParametre.css" rel="stylesheet">
-     <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+    <div id="pageParametres" ontouchstart="p2DemarerTouche(event)" ontouchmove="p2BougerTouche(event)" ontouchend="p2TerminerTouche(event)">
+        <link href="css/EcranParametre.css" rel="stylesheet">
+        <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
 
-    <h1 class="para-ecran-parametre">Paramètres</h1>
-    <div class="son-ecran-parametre">
-        <h1>Son</h1>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-    </div>
+        <h1 class="para-ecran-parametre">Paramètres</h1>
+        <div class="son-ecran-parametre">
+            <h1>Son</h1>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
 
-    <a href="#" class='menu-ecran-parametre-lien'><input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'></a>
-    <a href="#jeu" class='rejouer-ecran-parametre-lien'><input class='rejouer-ecran-parametre' type='submit' name='sub' value='Rejouer'></a>
-    <div class="niveau-ecran-parametre">
-        <h1 class="titre" id="score-ecran-parametre"></h1>
+        <a href="#" class='menu-ecran-parametre-lien'><input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'></a>
+        <a href="#jeu" class='rejouer-ecran-parametre-lien'><input class='rejouer-ecran-parametre' type='submit' name='sub' value='Rejouer'></a>
+        <div class="niveau-ecran-parametre">
+            <h1 class="titre" id="score-ecran-parametre"></h1>
+        </div>
     </div>
 
 </script>
@@ -131,36 +132,37 @@
 
     <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
 
-<h1 class="score-ecran-score">Score</h1>
-<div class="niveau-ecran-score">
-    <h1 id="score-joueur-courant"></h1>
-</div>
-<a href="#jeu" class="rejouer-form"><button class='rejouer-ecran-score' value='Rejouer' width="300" height="100">Rejouer</button></a>
-<div class="image-ecran-score">
-    <img src="images/podium.png">
-</div>
-<div class="lepodium-ecran-score">
-    <div id="premier-joueur-podium">
-        {scoreJoueur1}
+    <h1 class="score-ecran-score">Score</h1>
+    <div class="niveau-ecran-score">
+        <h1 id="score-joueur-courant"></h1>
     </div>
-    <div class="podium-ecran-score" id="autres-joueurs-podium">
-        <div id="deuxieme-joueur-podium">
-            {scoreJoueur2}
+    <a href="#jeu" class="rejouer-form"><button class='rejouer-ecran-score' value='Rejouer' width="300" height="100">Rejouer</button></a>
+    <div class="image-ecran-score">
+        <img src="images/podium.png">
+    </div>
+    <div class="lepodium-ecran-score">
+        <div id="premier-joueur-podium">
+            {scoreJoueur1}
         </div>
-        <div id="troisieme-joueur-podium">
-            {scoreJoueur3}
+        <div class="podium-ecran-score" id="autres-joueurs-podium">
+            <div id="deuxieme-joueur-podium">
+                {scoreJoueur2}
+            </div>
+            <div id="troisieme-joueur-podium">
+                {scoreJoueur3}
+            </div>
         </div>
     </div>
-</div>
-<div class="autres-ecran-score" id="classement-joueurs">
-    <div class="autre-ecran-score">
-        <h1>{score-joueur-classement}</h1><p>{nom-joueur-classement}</p>
+    <div class="autres-ecran-score" id="classement-joueurs">
+        <div class="autre-ecran-score">
+            <h1>{score-joueur-classement}</h1><p>{nom-joueur-classement}</p>
+        </div>
     </div>
-</div>
 
 </script>
 
 <script type="plain/text" id="html-vue-accueil-jeu">
+    <link rel="stylesheet" href="css/pageAccueilJeu.css">
     <div class="page">
     <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
 
@@ -219,4 +221,100 @@
     </div>
 </script>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+                var xDeDepart;
+
+                function p1DemarerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    xDeDepart = evenement.touches[0].clientX;
+                }
+
+                function p1BougerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    var touche = evenement.touches[0];
+                    var changement = xDeDepart - touche.clientX;
+
+                    if (changement < 0) {
+                        return;
+                    }
+
+                    //page1.style.left = '-' + changement + 'px';
+                    page2.style.display = 'block';
+                    page2.style.left = (screen.width - changement) + 'px';
+                    evenement.preventDefault();
+                }
+
+                function p1TerminerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    var changement = xDeDepart - evenement.changedTouches[0].clientX;
+                    var tiersDePage = screen.width / 3
+                    if (changement < tiersDePage) {
+                        //page1.style.left = '0';
+                        page2.style.left = '100%';
+                        page2.style.display = 'none';
+                    }
+                    else {
+                        //page1.style.transition = 'all .3s';
+                        page2.style.transition = 'all .3s';
+                        //page1.style.left = '-100%';
+                        page2.style.left = '0';
+                        page2.style.display = 'block';
+                    }
+                }
+
+                function p2DemarerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    xDeDepart = evenement.touches[0].clientX;
+                    //page1.style.transition = '';
+                    page2.style.transition = '';
+                    //page1.style.display = 'none';
+                }
+
+                function p2BougerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    var touche = evenement.touches[0];
+                    var changement = touche.clientX - xDeDepart;
+
+                    if (changement < 0) {
+                        return;
+                    }
+
+                    //page1.style.display = 'block';
+                    //page1.style.left = (changement - screen.width) + 'px';
+                    page2.style.left = changement + 'px';
+                    evenement.preventDefault();
+                }
+
+                function p2TerminerTouche(evenement){
+                    var page1 = document.getElementById('pageJeu');
+                    var page2 = document.getElementById('pageParametres');
+                    var changement = evenement.changedTouches[0].clientX - xDeDepart;
+                    var quartDePage = screen.width / 4;
+                    if (changement < quartDePage) {
+                        //page1.style.left = '-100%';
+                        //page1.style.display = 'none';
+                        page2.style.left = '0';
+                    }
+                    else {
+                        //page1.style.transition = 'all .3s';
+                        page2.style.transition = 'all .3s';
+                        //page1.style.left = '-100%';
+                        //page1.style.left = '0';
+                        page2.style.left = '100%';
+                    }
+                }
+
+
+
+</script>
 </html>

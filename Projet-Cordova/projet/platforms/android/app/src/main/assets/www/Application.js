@@ -1,11 +1,12 @@
 class Application {
-    constructor(window, vueAccueilJeu, vueJeu, vuePersonnalisationJeu, vueScore, vueParametre) {
+    constructor(window, vueAccueilJeu, vueJeu, vuePersonnalisationJeu, vueScore) {
         this.window = window;
         this.vueAccueilJeu = vueAccueilJeu;
         this.vueJeu = vueJeu;
         this.vuePersonnalisationJeu = vuePersonnalisationJeu;
         this.vueScore= vueScore;
-        this.vueParametre= vueParametre;
+
+        this.vueJeu.initialiserActionAllerVersPageScore(() =>this.allerVersPageScore());
 
         this.window.addEventListener('hashchange', () =>this.naviguer());
 
@@ -26,11 +27,8 @@ class Application {
             //window.location.href = urlSansFragment + "#score";
             //setTimeout(() =>this.naviguer(), 5000);
 
-        }else if (hash.match(/^#parametre/)){
-
-            this.vueParametre.afficher();
-
-        }else if (hash.match(/^#score/)){
+        }
+        else if (hash.match(/^#score/)){
 
             this.vueScore.afficher();
 
@@ -40,9 +38,10 @@ class Application {
         }
     }
 
-    actionAllerPagePersonnalisationJeu(){
-        this.window.location.hash = "#perso";
+    allerVersPageScore(){
+        this.window.location.hash = "#score";
     }
+
 }
 
-new Application(window, new VueAccueilJeu(), new VueJeu(), new VuePersonnalisationJeu(), new VueScore(), new VueParametre());
+new Application(window, new VueAccueilJeu(), new VueJeu(), new VuePersonnalisationJeu(), new VueScore());

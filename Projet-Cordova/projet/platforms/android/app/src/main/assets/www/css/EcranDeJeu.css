@@ -64,3 +64,21 @@ body{
 .pas-carre-du-haut-ecran-de-jeu{
     margin-top: 4vh;
 }
+
+#pageJeu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#pageParametres{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b2b2b;
+}
