@@ -14,6 +14,14 @@ if (isset($_GET["token"])){
                 echo $util;
             }
 
+            if ($_GET["methode"] == "getJoueurParId") {
+                if (isset($_GET["joueur"])){
+                    $utilisateur = $utilisateurDAO->getJoueurParId($_GET["joueur"]);
+                    $util = json_encode($utilisateur);
+                    echo $util;
+                }
+            }
+
             $utilisateur = $utilisateurDAO->getToutesJoueur();
             $util = json_encode($utilisateur);
 
