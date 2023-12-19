@@ -84,4 +84,10 @@ class joueurDAO
         array_push($argument, $pseudo);
         return $this->executerRequete($sql, $arguments);
     }
+
+    public function retournerLesVingtMeilleursScores(){
+        $sql = "SELECT * FROM `JOUEUR` ORDER BY meilleur_score_joueur DESC LIMIT 20;";
+        $argument = array();
+        return $this->lireRequete($sql, $argument);
+    }
 }
