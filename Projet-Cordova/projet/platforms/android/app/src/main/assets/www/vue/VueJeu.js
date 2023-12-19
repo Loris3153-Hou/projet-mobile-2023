@@ -16,6 +16,7 @@ class VueJeu {
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
+        document.getElementById("score-ecran-parametre").innerHTML = this.score;
 
         let cartes = document.getElementsByClassName("carre-ecran-de-jeu")
 
@@ -45,6 +46,7 @@ class VueJeu {
     augmenterScore() {
         this.score += 1;
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
+        document.getElementById("score-ecran-parametre").innerHTML = this.score;
     }
 
     async faireJouerSequence(){
