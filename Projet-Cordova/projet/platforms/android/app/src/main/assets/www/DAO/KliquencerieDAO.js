@@ -4,11 +4,11 @@ class KliquencerieDAO {
         this.token = "valeurAuthentification";
     }
 
-    test() {
+    retournerLesVingtMeilleursScores() {
         var xhr = new XMLHttpRequest();
 
         // Remplacez l'URL de votre API et de votre frontend
-        var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?joueur=1&token=' + this.token;
+        var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=retournerLesVingtMeilleursScores&token=' + this.token;
         var frontendUrl = 'https://localhost/index.html';
 
         xhr.open('GET', apiUrl, true);
