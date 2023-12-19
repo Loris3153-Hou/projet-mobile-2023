@@ -19,5 +19,8 @@
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "gsap": "^3.12.4"
   }
 }

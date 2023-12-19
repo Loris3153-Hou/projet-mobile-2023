@@ -17,8 +17,6 @@ class VueJeu {
 
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
 
-        document.getElementById("score-ecran-parametre").innerHTML = this.score;
-
         let cartes = document.getElementsByClassName("carre-ecran-de-jeu")
 
         setTimeout(() => this.faireJouerSequence(), 1000);

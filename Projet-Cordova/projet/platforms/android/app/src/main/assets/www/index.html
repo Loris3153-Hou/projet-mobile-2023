@@ -1,22 +1,15 @@
 <!DOCTYPE HTML>
-<html lang=fr>
+<html lang=fr id="html">
 <head>
     <meta content="text/html;charset=UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:; connect-src 'self' https://149.202.53.74 http://149.202.53.74;">
     <title>Document</title>
-    <link rel="stylesheet" href="css/pageAccueilJeu.css">
-    <script src="model/Joueur.js"></script>
-    <script src="DAO/KliquencerieDAO.js"></script>
+
     <script src="vue/VueAccueilJeu.js"></script>
     <script src="vue/VuePersonnalisationJeu.js"></script>
     <script src="vue/VueJeu.js"></script>
     <script src="vue/VueParametre.js"></script>
     <script src="vue/VueScore.js"></script>
     <script defer src="Application.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </head>
 <body>
 <div id="page-chargement-application">
@@ -169,6 +162,7 @@
 </script>
 
 <script type="plain/text" id="html-vue-accueil-jeu">
+    <link rel="stylesheet" href="css/pageAccueilJeu.css">
     <div class="page">
     <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
 
@@ -227,6 +221,9 @@
     </div>
 </script>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
 
@@ -317,21 +314,7 @@
                     }
                 }
 
-                /*const xhr = new XMLHttpRequest();
-                xhr.withCredentials = true;
 
-                xhr.addEventListener("readystatechange", function () {
-                  if (this.readyState === this.DONE) {
-                    console.log("reponse du serveur : " + this.responseText);
-                  }
-                });
-
-                xhr.open("GET", "https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php");
-
-                xhr.send();*/
-
-                kliquencerieDAO = new KliquencerieDAO();
-                kliquencerieDAO.test()
 
 </script>
 </html>
