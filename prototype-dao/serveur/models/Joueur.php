@@ -28,7 +28,7 @@ class Joueur
      */
     public function setIdJoueur($idJoueur)
     {
-        $this->idJoueur = $idJoueur;
+        $this->idJoueur = filter_var($idJoueur, FILTER_SANITIZE_NUMBER_INT);
     }
 
     /**
@@ -44,7 +44,7 @@ class Joueur
      */
     public function setPseudoJoueur($pseudoJoueur)
     {
-        $this->pseudoJoueur = $pseudoJoueur;
+        $this->pseudoJoueur = filter_var($pseudoJoueur, FILTER_SANITIZE_STRING);
     }
 
     /**
@@ -60,7 +60,7 @@ class Joueur
      */
     public function setMeilleurScoreJoueur($meilleurScoreJoueur)
     {
-        $this->meilleurScoreJoueur = $meilleurScoreJoueur;
+        $this->meilleurScoreJoueur = filter_var($meilleurScoreJoueur, FILTER_SANITIZE_NUMBER_INT);
     }
 
 }
