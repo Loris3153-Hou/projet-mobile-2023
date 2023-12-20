@@ -13,6 +13,10 @@ class VueJeu {
 
     afficher(){
 
+        this.score = 0;
+        this.sequenceJeu = [];
+        this.sequenceJoueur = [];
+
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;

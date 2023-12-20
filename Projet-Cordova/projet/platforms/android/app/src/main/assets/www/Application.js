@@ -28,6 +28,11 @@ class Application {
             //setTimeout(() =>this.naviguer(), 5000);
 
         }
+        else if(hash.match(/^#jeuRejouer/)){
+
+            this.window.location.hash = "#jeu";
+
+        }
         else if (hash.match(/^#score/)){
 
             this.vueScore.afficher();
@@ -44,5 +49,6 @@ class Application {
     }
 
 }
+
 
 new Application(window, new VueAccueilJeu(), new VueJeu(), new VuePersonnalisationJeu(), new VueScore());
