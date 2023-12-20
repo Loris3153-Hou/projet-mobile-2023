@@ -2,8 +2,19 @@ class VueScore {
     constructor(){
         this.html = document.getElementById("html-vue-score").innerHTML;
         this.score = 0;
-        this.listeVingtPremiersNomsJoueurs = ["louis", "carolle", "jean", "fanny", "edwardo", "elinadu53"];
-        this.listeVingtPremiersScoreJoueurs = [48, 36, 25, 18, 15, 9];
+        this.listeVingtPremiersNomsJoueurs = [];
+        this.listeVingtPremiersScoreJoueurs = [];
+        this.joueurDAO = new KliquencerieDAO();
+
+        // Call the asynchronous method and wait for it to complete
+        this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
+            // Access the data after the asynchronous call is completed
+            let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
+            for (let i = 0; i < listeDesJoueurs.length; i++) {
+                this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
+                this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
+            }
+        });
     }
 
     recupererScoreJoueurCourant(score){

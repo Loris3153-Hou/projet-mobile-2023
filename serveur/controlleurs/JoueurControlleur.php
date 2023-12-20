@@ -11,7 +11,6 @@ if (isset($_GET["token"])){
             if ($_GET["methode"] == "retournerLesVingtMeilleursScores"){
                 $utilisateur = $utilisateurDAO->retournerLesVingtMeilleursScores();
                 $util = json_encode($utilisateur);
-
             }
 
             if ($_GET["methode"] == "getJoueurParId") {
