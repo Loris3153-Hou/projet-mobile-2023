@@ -5,6 +5,9 @@ class VueJeu {
         this.sequenceJeu = [];
         this.sequenceJoueur = [];
         this.actionAllerVersPageScore = null;
+        this.imageURI = null;
+        this.elem = null;
+        this.listeJeu = null;
     }
 
     initialiserActionAllerVersPageScore(actionAllerVersPageScore){
@@ -20,9 +23,20 @@ class VueJeu {
         this.sequenceJoueur = [];
 
         document.getElementsByTagName("body")[0].innerHTML = this.html;
-
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
         document.getElementById("score-ecran-parametre").innerHTML = this.score;
+        let listeEnJSON = JSON.stringify(this.listeJeu);
+        console.log("Tesssst" + listeEnJSON);
+
+        for (let i = 1; i <= 9; i++) {
+            this.imageURI = this.listeJeu[i.toString()];
+            this.elem = document.getElementById("carte" + i.toString());
+            if (this.imageURI) {
+                this.elem.style.backgroundImage = "url('" + this.imageURI + "')";
+                this.elem.style.backgroundSize = "cover";
+                this.elem.style.backgroundRepeat = "no-repeat";
+            }
+        }
 
         let cartes = document.getElementsByClassName("carre-ecran-de-jeu")
 
@@ -73,6 +87,10 @@ class VueJeu {
             ease: 'back.out'
         })
         await this.sleep(1000);
+    }
+
+    initialiserListe(liste){
+        this.listeJeu = liste;
     }
 
     sleep(ms) {
