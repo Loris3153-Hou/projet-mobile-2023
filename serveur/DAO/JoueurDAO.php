@@ -4,6 +4,7 @@ namespace DAO;
 use models;
 
 include_once('../models/Joueur.php');
+require_once 'DAO.php';
 
 class joueurDAO
 {
@@ -21,10 +22,8 @@ class joueurDAO
 
     public function lireRequete($sql, $arguments)
     {
-
-        require 'DAO.php';
-
-        $bdd = new PDO("mysql:host=localhost;dbname=$db_name", $user, $pass);
+        global $db_name, $user, $pass;
+        $bdd = new \PDO("mysql:host=localhost;dbname=$db_name", $user, $pass);
         $rs = $bdd->prepare($sql);
         $rs->execute($arguments);
 
@@ -82,7 +81,7 @@ class joueurDAO
         $sql = "UPDATE JOUEUR SET JOUEUR.pseudo_joueur = ? WHERE `JOUEUR`.`id_joueur` = ?;";
         $argument = array();
         array_push($argument, $pseudo, $id);
-        return $this->executerRequete($sql, $arguments);
+        return $this->executerRequete($sql, $argument);
     }
 
     public function updateJoueurScore($score, $id)
@@ -90,7 +89,7 @@ class joueurDAO
         $sql = "UPDATE `JOUEUR` SET `meilleur_score_joueur` = ? WHERE `JOUEUR`.`id_joueur` = ?;";
         $argument = array();
         array_push($argument, $score, $id);
-        return $this->executerRequete($sql, $arguments);
+        return $this->executerRequete($sql, $argument);
     }
 
     public function retournerLesVingtMeilleursScores(){
