@@ -9,6 +9,8 @@ class Application {
         this.joueurCourant.setIdJoueur(1)
 
         this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
+        this.vueAccueilJeu.initialiserActionTransmettreCouleursTheme(listeCouleursTheme =>this.transmettreCouleursTheme(listeCouleursTheme))
+        this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
         this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
         this.vueScore.recupererJoueur(this.joueurCourant)
         this.vueJeu.recupererJoueur(this.joueurCourant)
@@ -51,6 +53,14 @@ class Application {
     allerVersPageScore(score){
         this.vueScore.recupererScoreJoueurCourant(score);
         this.window.location.hash = "#score";
+    }
+
+    transmettreCouleursTheme(listeCouleursTheme){
+        this.vueJeu.initialiserThemeJeu(listeCouleursTheme);
+    }
+
+    transmettreListe(liste){
+        this.vueJeu.initialiserListe(liste);
     }
 }
 

@@ -5,6 +5,10 @@ class VueJeu {
         this.sequenceJeu = [];
         this.sequenceJoueur = [];
         this.actionAllerVersPageScore = null;
+        this.imageURI = null;
+        this.elem = null;
+        this.listeJeu = null;
+        this.listeCouleursTheme = null;
         this.joueurCourant = null
         this.joueurDAO = new KliquencerieDAO();
     }
@@ -15,6 +19,10 @@ class VueJeu {
 
     initialiserActionAllerVersPageScore(actionAllerVersPageScore){
         this.actionAllerVersPageScore = actionAllerVersPageScore;
+    }
+
+    initialiserThemeJeu(listeCouleursTheme){
+        this.listeCouleursTheme = listeCouleursTheme;
     }
 
     afficher(){
@@ -30,6 +38,21 @@ class VueJeu {
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
         document.getElementById("score-ecran-parametre").innerHTML = this.score;
 
+        if (this.listeJeu) {
+            let listeEnJSON = JSON.stringify(this.listeJeu);
+            console.log("Tesssst" + listeEnJSON);
+
+            for (let i = 1; i <= 9; i++) {
+                this.imageURI = this.listeJeu[i.toString()];
+                this.elem = document.getElementById("carte" + i.toString());
+                if (this.imageURI) {
+                    this.elem.style.backgroundImage = "url('" + this.imageURI + "')";
+                    this.elem.style.backgroundSize = "cover";
+                    this.elem.style.backgroundRepeat = "no-repeat";
+                }
+            }
+        }
+
         let cartes = document.getElementsByClassName("carre-ecran-de-jeu")
 
         setTimeout(() => this.faireJouerSequence(), 1000);
@@ -37,6 +60,9 @@ class VueJeu {
         for (var i = 0; i < cartes.length; i++) {
             let idCarte = cartes[i].id;
             cartes[i].addEventListener("click", () =>this.verifierSequence(idCarte));
+            if (this.listeCouleursTheme) {
+                cartes[i].style.background = this.listeCouleursTheme[i];
+            }
         }
 
     }
@@ -47,7 +73,7 @@ class VueJeu {
             this.sequenceJoueur.push(idCarte);
             if (this.sequenceJoueur.length == this.sequenceJeu.length) {
                 this.augmenterScore();
-                setTimeout(() =>this.faireJouerSequence(), 2000);
+                setTimeout(() =>this.faireJouerSequence(), 1000);
             }
         }
         else {
@@ -94,6 +120,10 @@ class VueJeu {
             ease: 'back.out'
         })
         await this.sleep(1000);
+    }
+
+    initialiserListe(liste){
+        this.listeJeu = liste;
     }
 
     sleep(ms) {
