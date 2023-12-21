@@ -11,6 +11,7 @@ class Application {
         this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
         this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
         this.vueScore.recupererJoueur(this.joueurCourant)
+        this.vueJeu.recupererJoueur(this.joueurCourant)
 
         this.window.addEventListener('hashchange', () =>this.naviguer());
 

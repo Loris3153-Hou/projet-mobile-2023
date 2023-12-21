@@ -23,6 +23,7 @@ class joueurDAO
     public function lireRequete($sql, $arguments)
     {
         global $db_name, $user, $pass;
+
         $bdd = new \PDO("mysql:host=localhost;dbname=$db_name", $user, $pass);
         $rs = $bdd->prepare($sql);
         $rs->execute($arguments);
@@ -38,9 +39,9 @@ class joueurDAO
     public function executerRequete($sql, $arguments)
     {
 
-        require 'DAO.php';
+        global $db_name, $user, $pass;
 
-        $bdd = new PDO("mysql:host=localhost;dbname=$db_name", $user, $pass);
+        $bdd = new \PDO("mysql:host=localhost;dbname=$db_name", $user, $pass);
         $rs = $bdd->prepare($sql);
         $rs->execute($arguments);
 
