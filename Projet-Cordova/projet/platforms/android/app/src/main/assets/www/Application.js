@@ -10,6 +10,7 @@ class Application {
 
         this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
         this.vueAccueilJeu.initialiserActionTransmettreCouleursTheme(listeCouleursTheme =>this.transmettreCouleursTheme(listeCouleursTheme))
+        this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
         this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
         this.vueScore.recupererJoueur(this.joueurCourant)
 
@@ -55,6 +56,10 @@ class Application {
 
     transmettreCouleursTheme(listeCouleursTheme){
         this.vueJeu.initialiserThemeJeu(listeCouleursTheme);
+    }
+
+    transmettreListe(liste){
+        this.vueJeu.initialiserListe(liste);
     }
 }
 
