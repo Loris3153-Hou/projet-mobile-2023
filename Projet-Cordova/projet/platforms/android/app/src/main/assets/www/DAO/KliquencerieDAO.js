@@ -35,7 +35,7 @@ class KliquencerieDAO {
     retournerUnJoueurParSonId(idJoueur) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParId&idJoueur='+ idJoueur +'&token=' + this.token;
+            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParId&joueur='+ idJoueur +'&token=' + this.token;
             var frontendUrl = 'https://localhost/index.html';
 
             xhr.open('GET', apiUrl, true);
