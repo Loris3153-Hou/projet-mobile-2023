@@ -31,16 +31,19 @@ class VueJeu {
 
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
         document.getElementById("score-ecran-parametre").innerHTML = this.score;
-        let listeEnJSON = JSON.stringify(this.listeJeu);
-        console.log("Tesssst" + listeEnJSON);
 
-        for (let i = 1; i <= 9; i++) {
-            this.imageURI = this.listeJeu[i.toString()];
-            this.elem = document.getElementById("carte" + i.toString());
-            if (this.imageURI) {
-                this.elem.style.backgroundImage = "url('" + this.imageURI + "')";
-                this.elem.style.backgroundSize = "cover";
-                this.elem.style.backgroundRepeat = "no-repeat";
+        if (this.listeJeu) {
+            let listeEnJSON = JSON.stringify(this.listeJeu);
+            console.log("Tesssst" + listeEnJSON);
+
+            for (let i = 1; i <= 9; i++) {
+                this.imageURI = this.listeJeu[i.toString()];
+                this.elem = document.getElementById("carte" + i.toString());
+                if (this.imageURI) {
+                    this.elem.style.backgroundImage = "url('" + this.imageURI + "')";
+                    this.elem.style.backgroundSize = "cover";
+                    this.elem.style.backgroundRepeat = "no-repeat";
+                }
             }
         }
 
@@ -51,7 +54,9 @@ class VueJeu {
         for (var i = 0; i < cartes.length; i++) {
             let idCarte = cartes[i].id;
             cartes[i].addEventListener("click", () =>this.verifierSequence(idCarte));
-            cartes[i].style.background = this.listeCouleursTheme[i];
+            if (this.listeCouleursTheme) {
+                cartes[i].style.background = this.listeCouleursTheme[i];
+            }
         }
 
     }
