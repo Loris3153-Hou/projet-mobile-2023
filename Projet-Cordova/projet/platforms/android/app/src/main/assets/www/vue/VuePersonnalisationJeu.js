@@ -47,7 +47,7 @@ class VuePersonnalisationJeu {
     }
 
     erreur(message) {
-            console.error('Erreur : ' + message);
+        console.error('Erreur : ' + message);
     }
 
     initialiserActionTransmettreListe(actionTransmettreListe){

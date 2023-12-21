@@ -6,6 +6,20 @@ class VueAccueilJeu {
         this.theme = "div-theme-bleu";
         this.actionTransmettreCouleursTheme = null;
         this.joueurDAO = new KliquencerieDAO();
+        this.listeImagesTheme = null;
+        this.actionTransmettreListeImagesTheme = null;
+    }
+
+    reinitialiserListesImagesTheme(){
+        this.listeImagesTheme = null;
+    }
+
+    initialiserListe(liste){
+        this.listeImagesTheme = liste;
+    }
+
+    initialiserActionTransmettreListeImagesTheme(actionTransmettreListeImagesTheme){
+        this.actionTransmettreListeImagesTheme = actionTransmettreListeImagesTheme;
     }
 
     recupererJoueur(joueurCourant){
@@ -44,6 +58,7 @@ class VueAccueilJeu {
         }
 
         this.actionTransmettreCouleursTheme(listeCouleursTheme);
+        this.actionTransmettreListeImagesTheme(this.listeImagesTheme)
     }
 
     selectionnerTheme(idTheme){

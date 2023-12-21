@@ -10,6 +10,7 @@ class Application {
 
         this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
         this.vueAccueilJeu.initialiserActionTransmettreCouleursTheme(listeCouleursTheme =>this.transmettreCouleursTheme(listeCouleursTheme))
+        this.vueAccueilJeu.initialiserActionTransmettreListeImagesTheme(listeImagesTheme =>this.transmettreListeImagesTheme(listeImagesTheme))
         this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
         this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
         this.vueScore.recupererJoueur(this.joueurCourant)
@@ -25,10 +26,12 @@ class Application {
         let hash = window.location.hash;
         console.log("naviger :" + hash);
         if(!hash){
+            this.vueJeu.reinitialiserListesTheme();
             this.vueAccueilJeu.afficher();
 
         }else if(hash.match(/^#jeu/)){
 
+            this.vueAccueilJeu.reinitialiserListesImagesTheme();
             this.vueJeu.afficher();
             //let urlSansFragment = window.location.href.split('#')[0];
             //window.location.href = urlSansFragment + "#score";
@@ -60,6 +63,10 @@ class Application {
     }
 
     transmettreListe(liste){
+        this.vueAccueilJeu.initialiserListe(liste);
+    }
+
+    transmettreListeImagesTheme(liste){
         this.vueJeu.initialiserListe(liste);
     }
 }

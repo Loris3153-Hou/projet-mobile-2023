@@ -6,7 +6,6 @@ class VueJeu {
         this.sequenceJoueur = [];
         this.actionAllerVersPageScore = null;
         this.imageURI = null;
-        this.elem = null;
         this.listeJeu = null;
         this.listeCouleursTheme = null;
         this.joueurCourant = null
@@ -25,6 +24,11 @@ class VueJeu {
         this.listeCouleursTheme = listeCouleursTheme;
     }
 
+    reinitialiserListesTheme(){
+        this.listeJeu = null;
+        this.listeCouleursTheme = null;
+    }
+
     afficher(){
         /*console.log("pseudo : " + document.getElementById("input-text-pseudo").value)
         this.joueur.setPseudoJoueur(document.getElementById("input-text-pseudo").value)
@@ -38,20 +42,20 @@ class VueJeu {
         document.getElementById("score-ecran-de-jeu").innerHTML = this.score;
         document.getElementById("score-ecran-parametre").innerHTML = this.score;
 
-        if (this.listeJeu) {
+        /*if (this.listeJeu) {
             let listeEnJSON = JSON.stringify(this.listeJeu);
             console.log("Tesssst" + listeEnJSON);
 
             for (let i = 1; i <= 9; i++) {
-                this.imageURI = this.listeJeu[i.toString()];
-                this.elem = document.getElementById("carte" + i.toString());
+                this.imageURI = this.listeJeu[i];
+                let elem = document.getElementById("carte" + i.toString());
                 if (this.imageURI) {
-                    this.elem.style.backgroundImage = "url('" + this.imageURI + "')";
-                    this.elem.style.backgroundSize = "cover";
-                    this.elem.style.backgroundRepeat = "no-repeat";
+                    elem.style.backgroundImage = "url('" + this.imageURI + "')";
+                    elem.style.backgroundSize = "cover";
+                    elem.style.backgroundRepeat = "no-repeat";
                 }
             }
-        }
+        }*/
 
         let cartes = document.getElementsByClassName("carre-ecran-de-jeu")
 
@@ -61,7 +65,18 @@ class VueJeu {
             let idCarte = cartes[i].id;
             cartes[i].addEventListener("click", () =>this.verifierSequence(idCarte));
             if (this.listeCouleursTheme) {
-                cartes[i].style.background = this.listeCouleursTheme[i];
+                cartes[i].style.backgroundColor = this.listeCouleursTheme[i];
+                cartes[i].style.backgroundImage = "";
+                cartes[i].style.backgroundSize = "";
+                cartes[i].style.backgroundRepeat = "";
+            }
+            if (this.listeJeu) {
+                this.imageURI = this.listeJeu[i+1];
+                if (this.imageURI) {
+                    cartes[i].style.backgroundImage = "url('" + this.imageURI + "')";
+                    cartes[i].style.backgroundSize = "cover";
+                    cartes[i].style.backgroundRepeat = "no-repeat";
+                }
             }
         }
 
