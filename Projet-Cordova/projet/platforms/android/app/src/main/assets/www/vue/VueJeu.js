@@ -67,7 +67,7 @@ class VueJeu {
             this.sequenceJoueur.push(idCarte);
             if (this.sequenceJoueur.length == this.sequenceJeu.length) {
                 this.augmenterScore();
-                setTimeout(() =>this.faireJouerSequence(), 2000);
+                setTimeout(() =>this.faireJouerSequence(), 1000);
             }
         }
         else {
