@@ -5,6 +5,7 @@ class VueAccueilJeu {
         this.liste = null;
         this.theme = "div-theme-bleu";
         this.actionTransmettreCouleursTheme = null;
+        this.joueurDAO = new KliquencerieDAO();
     }
 
     recupererJoueur(joueurCourant){
@@ -13,6 +14,9 @@ class VueAccueilJeu {
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
+        //console.log("pseudo : " + this.joueurDAO.retournerUnJoueurParSonId(joueurCourant.getIdJoueur())[0].getPseudoJoueur())
+        //document.getElementById("input-text-pseudo").placeholder = this.joueurDAO.retournerUnJoueurParSonId(joueurCourant.getIdJoueur())[0].getPseudoJoueur();
+
         document.getElementById("formulaire-recuperation-pseudo").addEventListener("submit", evenement =>this.recupererPseudo(evenement));
 
         this.selectionnerTheme(this.theme);
@@ -23,6 +27,8 @@ class VueAccueilJeu {
             let idTheme = themes[i].id;
             themes[i].addEventListener("click", () =>this.selectionnerTheme(idTheme));
         }
+
+
     }
 
     recupererPseudo(evenement){

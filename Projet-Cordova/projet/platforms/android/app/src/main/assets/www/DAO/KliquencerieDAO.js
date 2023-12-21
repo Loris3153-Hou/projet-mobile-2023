@@ -60,6 +60,56 @@ class KliquencerieDAO {
         });
     }
 
+
+    miseAJourPseudo(idJoueur, NewPseudo) {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLePseudo&newPseudo='+ NewPseudo +'&joueur='+ idJoueur +'&token=' + this.token;
+            var frontendUrl = 'https://localhost/index.html';
+
+            xhr.open('GET', apiUrl, true);
+            xhr.setRequestHeader('Origin', frontendUrl);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        console.log("Pseudo Modifié : " + NewPseudo)
+                        resolve();  // Resolve the promise when the operation is complete
+                    } else {
+                        reject('La requête a échoué.');  // Reject the promise on error
+                    }
+                }
+            };
+
+            xhr.send();
+        });
+    }
+
+    miseAJourScore(idJoueur, NewScore) {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLeScore&newScore='+ NewScore +'&joueur='+ idJoueur +'&token=' + this.token;
+            var frontendUrl = 'https://localhost/index.html';
+
+            xhr.open('GET', apiUrl, true);
+            xhr.setRequestHeader('Origin', frontendUrl);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        console.log("Score Modifié : " + NewScore)
+                        resolve();  // Resolve the promise when the operation is complete
+                    } else {
+                        reject('La requête a échoué.');  // Reject the promise on error
+                    }
+                }
+            };
+
+            xhr.send();
+        });
+    }
+
+
     convertirJsonEnString(jsonInput) {
         var listeObjetsJoueurs = JSON.parse(jsonInput).map(jsonJoueur => {
             const joueur = new Joueur();

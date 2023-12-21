@@ -7,13 +7,7 @@ class VueScore {
         this.joueurCourant = null
         this.joueurDAO = new KliquencerieDAO();
 
-        this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
-            let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
-            for (let i = 0; i < listeDesJoueurs.length; i++) {
-                this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
-                this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
-            }
-        });
+
     }
 
     recupererJoueur(joueurCourant){
@@ -25,6 +19,7 @@ class VueScore {
     }
 
     afficherScoresVingtPremiersJoueurs(){
+
         let divPremierJoueurPodium = document.getElementById("premier-joueur-podium");
         divPremierJoueurPodium.innerHTML = divPremierJoueurPodium.innerHTML.replace("{scoreJoueur1}", this.listeVingtPremiersNomsJoueurs[0] + "-" + this.listeVingtPremiersScoreJoueurs[0]);
 
@@ -49,16 +44,23 @@ class VueScore {
 
     }
     afficher(){
-        console.log("pseudo du Joueur : " + this.joueurCourant.getPseudoJoueur())
-        this.joueurDAO.retournerUnJoueurParSonId(this.joueurCourant.getIdJoueur()).then(() => {
+
+        this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
             let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
+            this.listeVingtPremiersNomsJoueurs = [];
+            this.listeVingtPremiersScoreJoueurs = [];
             for (let i = 0; i < listeDesJoueurs.length; i++) {
-                console.log("pseudo du Joueur : " + listeDesJoueurs[i].getPseudoJoueur())
+                this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
+                this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
             }
+            document.getElementsByTagName("body")[0].innerHTML = this.html;
+
+            document.getElementById("score-joueur-courant").innerHTML = this.score;
+            this.afficherScoresVingtPremiersJoueurs();
         });
-        document.getElementsByTagName("body")[0].innerHTML = this.html;
-        this.afficherScoresVingtPremiersJoueurs();
-        document.getElementById("score-joueur-courant").innerHTML = this.score;
+
+
     }
+
 
 }

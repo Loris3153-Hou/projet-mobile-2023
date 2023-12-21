@@ -9,6 +9,12 @@ class VueJeu {
         this.elem = null;
         this.listeJeu = null;
         this.listeCouleursTheme = null;
+        this.joueurCourant = null
+        this.joueurDAO = new KliquencerieDAO();
+    }
+
+    recupererJoueur(joueurCourant){
+        this.joueurCourant = joueurCourant
     }
 
     initialiserActionAllerVersPageScore(actionAllerVersPageScore){
@@ -67,11 +73,26 @@ class VueJeu {
             this.sequenceJoueur.push(idCarte);
             if (this.sequenceJoueur.length == this.sequenceJeu.length) {
                 this.augmenterScore();
-                setTimeout(() =>this.faireJouerSequence(), 2000);
+                setTimeout(() =>this.faireJouerSequence(), 1000);
             }
         }
         else {
-            this.actionAllerVersPageScore(this.score);
+            console.log("pseudo du Joueur : " + this.joueurCourant.getPseudoJoueur())
+            this.joueurDAO.retournerUnJoueurParSonId(this.joueurCourant.getIdJoueur()).then(() => {
+                let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
+                for (let i = 0; i < listeDesJoueurs.length; i++) {
+                    if(this.joueurCourant.getPseudoJoueur() != listeDesJoueurs[i].getPseudoJoueur()){
+                        this.joueurDAO.miseAJourPseudo(this.joueurCourant.getIdJoueur(), this.joueurCourant.getPseudoJoueur())
+                        console.log("pseudo du Joueur : " + listeDesJoueurs[i].getPseudoJoueur())
+                    }
+                    if(this.score > listeDesJoueurs[i].getMeilleurScoreJoueur()){
+                        this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), this.score)
+                    }
+
+                }
+            });
+
+            setTimeout(() => this.actionAllerVersPageScore(this.score), 1000);
         }
     }
 

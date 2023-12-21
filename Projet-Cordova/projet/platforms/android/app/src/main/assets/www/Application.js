@@ -13,6 +13,7 @@ class Application {
         this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
         this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
         this.vueScore.recupererJoueur(this.joueurCourant)
+        this.vueJeu.recupererJoueur(this.joueurCourant)
 
         this.window.addEventListener('hashchange', () =>this.naviguer());
 
