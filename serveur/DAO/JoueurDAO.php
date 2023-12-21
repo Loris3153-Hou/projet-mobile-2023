@@ -77,11 +77,19 @@ class joueurDAO
         return $this->executerRequete($sql, $argument);
     }
 
-    public function updateJoueur($pseudo)
+    public function updateJoueurPseudo($pseudo, $id)
     {
-        $sql = "UPDATE JOUEUR SET JOUEUR.pseudo_joueur = ?;";
+        $sql = "UPDATE JOUEUR SET JOUEUR.pseudo_joueur = ? WHERE `JOUEUR`.`id_joueur` = ?;";
         $argument = array();
-        array_push($argument, $pseudo);
+        array_push($argument, $pseudo, $id);
+        return $this->executerRequete($sql, $arguments);
+    }
+
+    public function updateJoueurScore($score, $id)
+    {
+        $sql = "UPDATE `JOUEUR` SET `meilleur_score_joueur` = ? WHERE `JOUEUR`.`id_joueur` = ?;";
+        $argument = array();
+        array_push($argument, $score, $id);
         return $this->executerRequete($sql, $arguments);
     }
 

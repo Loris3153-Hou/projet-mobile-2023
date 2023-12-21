@@ -12,7 +12,9 @@ class VueJeu {
     }
 
     afficher(){
-
+        /*console.log("pseudo : " + document.getElementById("input-text-pseudo").value)
+        this.joueur.setPseudoJoueur(document.getElementById("input-text-pseudo").value)
+        console.log(this.joueur.getPseudoJoueur())*/
         this.score = 0;
         this.sequenceJeu = [];
         this.sequenceJoueur = [];

@@ -32,8 +32,32 @@ class KliquencerieDAO {
         });
     }
 
-    getListeObjetsJoueurs() {
-        return this.listeObjetsJoueurs;
+    retournerUnJoueurParSonId(idJoueur) {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParId&idJoueur='+ idJoueur +'&token=' + this.token;
+            var frontendUrl = 'https://localhost/index.html';
+
+            xhr.open('GET', apiUrl, true);
+            xhr.setRequestHeader('Origin', frontendUrl);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var response = xhr.responseText;
+                        this.listeObjetsJoueurs = this.convertirJsonEnString(response);
+                        for (let joueur of this.listeObjetsJoueurs) {
+                            console.log('ID du joueur :', joueur.getIdJoueur());
+                        }
+                        resolve();  // Resolve the promise when the operation is complete
+                    } else {
+                        reject('La requête a échoué.');  // Reject the promise on error
+                    }
+                }
+            };
+
+            xhr.send();
+        });
     }
 
     convertirJsonEnString(jsonInput) {
@@ -45,5 +69,11 @@ class KliquencerieDAO {
             return joueur;
         });
         return listeObjetsJoueurs;
+    }
+
+//------------------------GETTERS AND SETTERS------------------------
+
+    getListeObjetsJoueurs() {
+        return this.listeObjetsJoueurs;
     }
 }

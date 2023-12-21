@@ -14,7 +14,7 @@ if (isset($_GET["token"])){
             }
 
             if ($_GET["methode"] == "getJoueurParId") {
-                if (isset($_GET["joueur"])){
+                if (isset($_GET["idJoueur"])){
                     $utilisateur = $utilisateurDAO->getJoueurParId($_GET["joueur"]);
                     $util = json_encode($utilisateur);
                 }

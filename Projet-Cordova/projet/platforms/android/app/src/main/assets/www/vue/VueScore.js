@@ -4,17 +4,20 @@ class VueScore {
         this.score = 0;
         this.listeVingtPremiersNomsJoueurs = [];
         this.listeVingtPremiersScoreJoueurs = [];
+        this.joueurCourant = null
         this.joueurDAO = new KliquencerieDAO();
 
-        // Call the asynchronous method and wait for it to complete
         this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
-            // Access the data after the asynchronous call is completed
             let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
             for (let i = 0; i < listeDesJoueurs.length; i++) {
                 this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
                 this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
             }
         });
+    }
+
+    recupererJoueur(joueurCourant){
+        this.joueurCourant = joueurCourant
     }
 
     recupererScoreJoueurCourant(score){
@@ -46,6 +49,13 @@ class VueScore {
 
     }
     afficher(){
+        console.log("pseudo du Joueur : " + this.joueurCourant.getPseudoJoueur())
+        this.joueurDAO.retournerUnJoueurParSonId(this.joueurCourant.getIdJoueur()).then(() => {
+            let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
+            for (let i = 0; i < listeDesJoueurs.length; i++) {
+                console.log("pseudo du Joueur : " + listeDesJoueurs[i].getPseudoJoueur())
+            }
+        });
         document.getElementsByTagName("body")[0].innerHTML = this.html;
         this.afficherScoresVingtPremiersJoueurs();
         document.getElementById("score-joueur-courant").innerHTML = this.score;
