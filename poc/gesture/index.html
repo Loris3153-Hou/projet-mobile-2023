@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>POC Swipe</title>
+</head>
+
+<style>
+
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #page1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: aqua;
+    }
+    #page2{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: blueviolet;
+    }
+
+</style>
+
+<body>
+
+<div id="page1" ontouchstart="p1DemarerTouche(event)" ontouchmove="p1BougerTouche(event)" ontouchend="p1TerminerTouche(event)">Bonjour</div>
+<div id="page2" ontouchstart="p2DemarerTouche(event)" ontouchmove="p2BougerTouche(event)" ontouchend="p2TerminerTouche(event)">Au revoir</div>
+
+</body>
+
+<script>
+
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+
+    var xDeDepart;
+
+    function p1DemarerTouche(evenement){
+        xDeDepart = evenement.touches[0].clientX;
+    }
+
+    function p1BougerTouche(evenement){
+        var touche = evenement.touches[0];
+        var changement = xDeDepart - touche.clientX;
+
+        if (changement < 0) {
+            return;
+        }
+
+        page1.style.left = "-" + changement + "px";
+        page2.style.display = "block";
+        page2.style.left = (screen.width - changement) + "px";
+        evenement.preventDefault();
+    }
+
+    function p1TerminerTouche(evenement){
+        var changement = xDeDepart - evenement.changedTouches[0].clientX;
+        var tiersDePage = screen.width / 3
+        if (changement < tiersDePage) {
+            page1.style.left = "0";
+            page2.style.left = "100%";
+            page2.style.display = "none";
+        }
+        else {
+            page1.style.transition = "all .3s";
+            page2.style.transition = "all .3s";
+            page1.style.left = "-100%";
+            page2.style.left = "0";
+            page2.style.display = "block"
+        }
+    }
+
+    function p2DemarerTouche(evenement){
+        xDeDepart = evenement.touches[0].clientX;
+        page1.style.transition = "";
+        page2.style.transition = "";
+        page1.style.display = "none";
+    }
+
+    function p2BougerTouche(evenement){
+        var touche = evenement.touches[0];
+        var changement = touche.clientX - xDeDepart;
+
+        if (changement < 0) {
+            return;
+        }
+
+        page1.style.display = "block";
+        page1.style.left = (changement - screen.width) + "px";
+        page2.style.left = changement + "px";
+        evenement.preventDefault();
+    }
+
+    function p2TerminerTouche(evenement){
+        var changement = evenement.changedTouches[0].clientX - xDeDepart;
+        var quartDePage = screen.width / 4;
+        if (changement < quartDePage) {
+            page1.style.left = "-100%";
+            page1.style.display = "none";
+            page2.style.left = "0";
+        }
+        else {
+            page1.style.transition = "all .3s";
+            page2.style.transition = "all .3s";
+            page1.style.left = "-100%";
+            page1.style.left = "0";
+            page2.style.left = "100%"
+        }
+    }
+
+</script>
+
+</html>
