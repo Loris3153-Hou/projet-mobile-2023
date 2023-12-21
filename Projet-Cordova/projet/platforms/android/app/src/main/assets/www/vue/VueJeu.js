@@ -5,10 +5,15 @@ class VueJeu {
         this.sequenceJeu = [];
         this.sequenceJoueur = [];
         this.actionAllerVersPageScore = null;
+        this.listeCouleursTheme = null;
     }
 
     initialiserActionAllerVersPageScore(actionAllerVersPageScore){
         this.actionAllerVersPageScore = actionAllerVersPageScore;
+    }
+
+    initialiserThemeJeu(listeCouleursTheme){
+        this.listeCouleursTheme = listeCouleursTheme;
     }
 
     afficher(){
@@ -31,6 +36,7 @@ class VueJeu {
         for (var i = 0; i < cartes.length; i++) {
             let idCarte = cartes[i].id;
             cartes[i].addEventListener("click", () =>this.verifierSequence(idCarte));
+            cartes[i].style.background = this.listeCouleursTheme[i];
         }
 
     }
