@@ -47,6 +47,8 @@ class VueScore {
 
         this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
             let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
+            this.listeVingtPremiersNomsJoueurs = [];
+            this.listeVingtPremiersScoreJoueurs = [];
             for (let i = 0; i < listeDesJoueurs.length; i++) {
                 this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
                 this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
