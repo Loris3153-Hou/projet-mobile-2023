@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang=fr>
+<head>
+    <meta charset=UTF-8">
+    <title>Ecran score</title>
+    <link href="css/EcranScore.css" rel="stylesheet">
+</head>
+
+<script src="vue/VueScore.js"></script>
+
+<body>
+<h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
+
+<h1 class="score-ecran-score">Score</h1>
+<div class="niveau-ecran-score">
+    <h1 id="score-joueur-courant"></h1>
+</div>
+<input class='rejouer-ecran-score' type='submit' name='sub' value='Rejouer' width="300" height="100">
+<div class="image-ecran-score">
+    <img src="images/podium.png" width="1000" height="1000">
+</div>
+<div class="lepodium-ecran-score">
+    <div id="premier-joueur-podium">
+        {scoreJoueur1}
+    </div>
+    <div class="podium-ecran-score" id="autres-joueurs-podium">
+        <div id="deuxieme-joueur-podium">
+            {scoreJoueur2}
+        </div>
+        <div id="troisieme-joueur-podium">
+            {scoreJoueur3}
+        </div>
+    </div>
+</div>
+<div class="autres-ecran-score" id="classement-joueurs">
+    <div class="autre-ecran-score">
+        <h1>{score-joueur-classement}</h1><p>{nom-joueur-classement}</p>
+    </div>
+</div>
+
+<script>
+    let vueScore = new VueScore();
+    vueScore.afficherScoresVingtPremiersJoueurs();
+    vueScore.afficherScoreJoueurCourant();
+</script>
+
+</body>
+
+</html>

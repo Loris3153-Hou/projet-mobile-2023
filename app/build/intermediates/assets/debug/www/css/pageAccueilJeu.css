@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Krona One';
+    src: url('font/Krona_One/KronaOne-Regular.ttf')  format('truetype');
+}
+
+.titre{
+    grid-area: 1 / 2 / 2 / 3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    font-family: Krona One;
+    margin-top: 2vh;
+    margin-bottom: 7vh;
+}
+
+.titre1{
+    color: blue;
+}
+
+.titre2{
+    color: yellow;
+}
+
+.titre3{
+    color: red;
+}
+
+.label-parametres-depart-ecran-accueil {
+    color: #FFF;
+    font-family: Krona One;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 8.5vw;
+    margin-top: 4vh;
+}
+
+#input-text-pseudo {
+    width: 78vw;
+    height: 3vh;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 0;
+    background: rgba(217, 217, 217, 0.38);
+    font-family: Krona One;
+    padding-left: 3vw;
+    font-size: 3vw;
+    margin-left: 8.5vw;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.div-themes {
+    border-radius: 25px;
+    background: rgba(217, 217, 217, 0.38);
+    width: 38vw;
+    height: 24vh;
+    flex-shrink: 0;
+}
+
+#div-choix-theme {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#div-theme-bleu {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-left: 8.5vw;
+    background: rgba(217, 217, 217, 0.78);
+}
+#div-theme-rouge {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-left: 2.5vw;
+}
+#div-theme-vert {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-left: 8.5vw;
+    margin-top: 1.3vh;
+}
+#div-theme-personnalisable { grid-area: 2 / 2 / 3 / 3; margin-left: 2.5vw; margin-top: 1.3vh;}
+
+#bouton-jouer-ecran-accueil {
+    width: 50vw;
+    height: 6vh;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FBFF27;
+    font-family: Krona One;
+    font-size: 5vw;
+    border: 0;
+}
+
+.conteneur-bouton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vh;
+}
+
+#div-carte-1-theme-bleu { grid-area: 1 / 1 / 2 / 2; background-color: #97AEFF; margin-left: 6vw; margin-top: 3vh;}
+#div-carte-2-theme-bleu { grid-area: 1 / 2 / 2 / 3; background-color: #4EBFFF; margin-top: 3vh; margin-left: 3vw;}
+#div-carte-3-theme-bleu { grid-area: 1 / 3 / 2 / 4; background-color: #0176FF; margin-top: 3vh;}
+#div-carte-4-theme-bleu { grid-area: 2 / 1 / 3 / 2; background-color: #5F83C9; margin-left: 6vw; margin-top: 1.5vh;}
+#div-carte-5-theme-bleu { grid-area: 2 / 2 / 3 / 3; background-color: #1B7BB0; margin-left: 3vw; margin-top: 1.5vh;}
+#div-carte-6-theme-bleu { grid-area: 2 / 3 / 3 / 4; background-color: #1F6E87; margin-top: 1.5vh;}
+#div-carte-7-theme-bleu { grid-area: 3 / 1 / 4 / 2; background-color: #008FCC; margin-left: 6vw;}
+#div-carte-8-theme-bleu { grid-area: 3 / 2 / 4 / 3; background-color: #2EF2FF; margin-left: 3vw;}
+#div-carte-9-theme-bleu { grid-area: 3 / 3 / 4 / 4; background-color: #00599A; }
+
+#div-carte-1-theme-rouge { grid-area: 1 / 1 / 2 / 2; background-color: #FF4242; margin-left: 6vw; margin-top: 3vh;}
+#div-carte-2-theme-rouge { grid-area: 1 / 2 / 2 / 3; background-color: #C61414; margin-top: 3vh; margin-left: 3vw;}
+#div-carte-3-theme-rouge { grid-area: 1 / 3 / 2 / 4; background-color: #8C2424; margin-top: 3vh;}
+#div-carte-4-theme-rouge { grid-area: 2 / 1 / 3 / 2; background-color: #7E1919; margin-left: 6vw; margin-top: 1.5vh;}
+#div-carte-5-theme-rouge { grid-area: 2 / 2 / 3 / 3; background-color: #9A0606; margin-left: 3vw; margin-top: 1.5vh;}
+#div-carte-6-theme-rouge { grid-area: 2 / 3 / 3 / 4; background-color: #FE5757; margin-top: 1.5vh;}
+#div-carte-7-theme-rouge { grid-area: 3 / 1 / 4 / 2; background-color: #A60000; margin-left: 6vw;}
+#div-carte-8-theme-rouge { grid-area: 3 / 2 / 4 / 3; background-color: #BB0505; margin-left: 3vw;}
+#div-carte-9-theme-rouge { grid-area: 3 / 3 / 4 / 4; background-color: #EF3838; }
+
+#div-carte-1-theme-vert { grid-area: 1 / 1 / 2 / 2; background-color: #0AFF22; margin-left: 6vw; margin-top: 3vh;}
+#div-carte-2-theme-vert { grid-area: 1 / 2 / 2 / 3; background-color: #84FF90; margin-top: 3vh; margin-left: 3vw;}
+#div-carte-3-theme-vert { grid-area: 1 / 3 / 2 / 4; background-color: #30B900; margin-top: 3vh;}
+#div-carte-4-theme-vert { grid-area: 2 / 1 / 3 / 2; background-color: #00AB11; margin-left: 6vw; margin-top: 1.5vh;}
+#div-carte-5-theme-vert { grid-area: 2 / 2 / 3 / 3; background-color: #40A63D; margin-left: 3vw; margin-top: 1.5vh;}
+#div-carte-6-theme-vert { grid-area: 2 / 3 / 3 / 4; background-color: #317819; margin-top: 1.5vh;}
+#div-carte-7-theme-vert { grid-area: 3 / 1 / 4 / 2; background-color: #2EAF00; margin-left: 6vw;}
+#div-carte-8-theme-vert { grid-area: 3 / 2 / 4 / 3; background-color: #84FF58; margin-left: 3vw;}
+#div-carte-9-theme-vert { grid-area: 3 / 3 / 4 / 4; background-color: #ACFF8E; }
+
+.div-cartes-ecran-accueil {
+    width: 6.7vw;
+    height: 4vh;
+    flex-shrink: 0;
+    border-radius:5px;
+}

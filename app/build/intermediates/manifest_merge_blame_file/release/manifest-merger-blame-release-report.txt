@@ -1,0 +1,172 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.exemple.projet"
+4    android:hardwareAccelerated="true"
+5    android:versionCode="10000"
+6    android:versionName="1.0.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="24"
+9-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml
+11
+12    <supports-screens
+12-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:5-191
+13        android:anyDensity="true"
+13-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:23-48
+14        android:largeScreens="true"
+14-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:49-76
+15        android:normalScreens="true"
+15-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:77-105
+16        android:resizeable="true"
+16-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:106-131
+17        android:smallScreens="true"
+17-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:132-159
+18        android:xlargeScreens="true" />
+18-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:3:160-188
+19
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:4:5-67
+20-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
+21    <uses-permission
+21-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:16:5-108
+22        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+22-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:16:49-105
+23        android:maxSdkVersion="32" />
+23-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:16:22-48
+24    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+24-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:17:5-76
+24-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:17:22-73
+25    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+25-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:18:5-75
+25-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:18:22-72
+26
+27    <queries>
+27-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:19:5-33:15
+28        <intent>
+28-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:20:9-22:18
+29            <action android:name="android.media.action.IMAGE_CAPTURE" />
+29-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:21:13-73
+29-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:21:21-70
+30        </intent>
+31        <intent>
+31-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:23:9-25:18
+32            <action android:name="android.intent.action.GET_CONTENT" />
+32-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:24:13-72
+32-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:24:21-69
+33        </intent>
+34        <intent>
+34-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:26:9-28:18
+35            <action android:name="android.intent.action.PICK" />
+35-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:27:13-65
+35-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:27:21-62
+36        </intent>
+37        <intent>
+37-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:29:9-32:18
+38            <action android:name="com.android.camera.action.CROP" />
+38-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:30:13-69
+38-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:30:21-66
+39
+40            <data
+40-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:31:13-73
+41                android:mimeType="image/*"
+41-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:31:19-45
+42                android:scheme="content" />
+42-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:31:46-70
+43        </intent>
+44    </queries>
+45
+46    <permission
+46-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+47        android:name="com.exemple.projet.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+47-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+48        android:protectionLevel="signature" />
+48-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+49
+50    <uses-permission android:name="com.exemple.projet.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+50-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+50-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+51
+52    <application
+52-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:5:5-15:19
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.9.0] /home/mathilde/.gradle/caches/transforms-3/562c50581a3ac5dc6fa97c7a3ad5b072/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+54        android:extractNativeLibs="false"
+55        android:hardwareAccelerated="true"
+55-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
+56        android:icon="@mipmap/ic_launcher"
+56-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:5:53-87
+57        android:label="@string/app_name"
+57-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:5:88-120
+58        android:supportsRtl="true" >
+58-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:5:121-147
+59        <activity
+59-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
+60            android:name="com.exemple.projet.MainActivity"
+60-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:229-256
+61            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+61-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:19-135
+62            android:exported="true"
+62-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:136-159
+63            android:label="@string/activity_name"
+63-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:160-197
+64            android:launchMode="singleTop"
+64-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:198-228
+65            android:theme="@style/Theme.App.SplashScreen"
+65-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:257-302
+66            android:windowSoftInputMode="adjustResize" >
+66-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:6:303-345
+67            <intent-filter android:label="@string/launcher_name" >
+67-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
+67-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
+68                <action android:name="android.intent.action.MAIN" />
+68-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
+68-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
+70-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+71            </intent-filter>
+72        </activity>
+73
+74        <provider
+75            android:name="org.apache.cordova.camera.FileProvider"
+75-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:12:149-202
+76            android:authorities="com.exemple.projet.cordova.plugin.camera.provider"
+76-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:12:19-88
+77            android:exported="false"
+77-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:12:89-113
+78            android:grantUriPermissions="true" >
+78-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:12:114-148
+79            <meta-data
+79-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:13:13-123
+80                android:name="android.support.FILE_PROVIDER_PATHS"
+80-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:13:24-74
+81                android:resource="@xml/camera_provider_paths" />
+81-->/home/mathilde/Documents/GitHub/projet-mobile-2023-Loris3153-Hou/Projet-Cordova/projet/platforms/android/app/src/main/AndroidManifest.xml:13:75-120
+82        </provider>
+83        <provider
+83-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+84            android:name="androidx.startup.InitializationProvider"
+84-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+85            android:authorities="com.exemple.projet.androidx-startup"
+85-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+86            android:exported="false" >
+86-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+87            <meta-data
+87-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+88-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+89                android:value="androidx.startup" />
+89-->[androidx.emoji2:emoji2:1.2.0] /home/mathilde/.gradle/caches/transforms-3/a31258d805460b784f1e2684934664b6/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mathilde/.gradle/caches/transforms-3/9f76cd1ae65cd1470b10f43d0fb0067b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+91                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+91-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mathilde/.gradle/caches/transforms-3/9f76cd1ae65cd1470b10f43d0fb0067b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+92                android:value="androidx.startup" />
+92-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mathilde/.gradle/caches/transforms-3/9f76cd1ae65cd1470b10f43d0fb0067b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+93        </provider>
+94    </application>
+95
+96</manifest>

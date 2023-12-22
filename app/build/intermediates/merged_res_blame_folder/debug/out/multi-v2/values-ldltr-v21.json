@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.exemple.projet.app-mergeDebugResources-22:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/mathilde/.gradle/caches/transforms-3/72c3a761df7a6f33dccc7ea5fda99208/transformed/appcompat-1.6.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}
