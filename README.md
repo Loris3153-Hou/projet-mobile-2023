@@ -1,6 +1,10 @@
 # projet-mobile-2023-Loris3153-Hou
 projet-mobile-2023-Loris3153-Hou created by GitHub Classroom
 
+# Lien vers la video de presentation du projet
+
+https://www.youtube.com/watch?v=SVtgrNA4pko
+
 # Sujet et but : 
 
 Faire un jeu dont le but sera de mémoriser des séquences. Ces séquences seront progressives en s'incrementant de 1 à chaque niveau. 
