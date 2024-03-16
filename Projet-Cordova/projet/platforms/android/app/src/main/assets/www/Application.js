@@ -1,7 +1,8 @@
 class Application {
-    constructor(window, vueAccueilJeu, vueJeu, vuePersonnalisationJeu, vueScore, joueur) {
+    constructor(window, vueAccueilJeu, vueJeu, vuePersonnalisationJeu, vueScore, vueAnimation, joueur) {
         this.window = window;
         this.vueAccueilJeu = vueAccueilJeu;
+        this.vueAnimation = vueAnimation;
         this.vueJeu = vueJeu;
         this.vuePersonnalisationJeu = vuePersonnalisationJeu;
         this.vueScore= vueScore;
@@ -27,7 +28,7 @@ class Application {
         console.log("naviger :" + hash);
         if(!hash){
             this.vueJeu.reinitialiserListesTheme();
-            this.vueAccueilJeu.afficher();
+            this.vueAnimation.afficher();
 
         }else if(hash.match(/^#jeu/)){
 
@@ -37,7 +38,12 @@ class Application {
             //window.location.href = urlSansFragment + "#score";
             //setTimeout(() =>this.naviguer(), 5000);
 
-        }
+        }else if(hash.match(/^#accueil/)){
+
+            this.vueJeu.reinitialiserListesTheme();
+            this.vueAccueilJeu.afficher();
+
+         }
         else if(hash.match(/^#jeuRejouer/)){
 
             this.window.location.hash = "#jeu";
@@ -72,4 +78,4 @@ class Application {
 }
 
 
-new Application(window, new VueAccueilJeu(), new VueJeu(), new VuePersonnalisationJeu(), new VueScore(), new Joueur());
+new Application(window, new VueAccueilJeu(), new VueJeu(), new VuePersonnalisationJeu(), new VueScore(), new VueAnimation(),new Joueur());

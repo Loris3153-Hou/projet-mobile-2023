@@ -5,6 +5,7 @@
     <title>Document</title>
     <script src="model/Joueur.js"></script>
     <script src="DAO/KliquencerieDAO.js"></script>
+    <script src="vue/VueAnimation.js"></script>
     <script src="vue/VueAccueilJeu.js"></script>
     <script src="vue/VuePersonnalisationJeu.js"></script>
     <script src="vue/VueJeu.js"></script>
@@ -13,19 +14,74 @@
     <script src="cordova.js"></script>
 </head>
 <body>
+<script type="plain/text" id="page-animation-application">
+    <link href="css/EcranAnimation.css" rel="stylesheet">
+    <div class="carres-ecran-animation">
+        <div id="carre1" class=""></div>
+        <div id="carre2" class=""></div>
+        <div id="carre3" class=""></div>
+        <div id="carre4" class=""></div>
+        <div id="carre5" class=""></div>
+        <div id="carre6" class=""></div>
+        <div id="carre7" class=""></div>
+        <div id="carre9" class=""></div>
+        <div id="carre8" class=""><h1 class="titre">Bienvenue</h1></div>
+        <div id="carre10" class=""></div>
+        <div id="carre11" class=""></div>
+        <div id="carre12" class=""></div>
+        <div id="carre13" class=""><h1 class="titre">sur</h1></div>
+        <div id="carre14" class=""></div>
+        <div id="carre15" class=""></div>
+        <div id="carre16" class=""></div>
+        <div id="carre17" class=""><h1 class="titre"><span class="titre1">Kliq</span></h1></div>
+        <div id="carre18" class=""><h1 class="titre"><span class="titre2">uens</span></h1></div>
+        <div id="carre19" class=""><h1 class="titre"><span class="titre3">erie</span></h1></div>
+        <div id="carre20" class=""></div>
+        <div id="carre21" class=""></div>
+        <div id="carre22" class=""></div>
+        <div id="carre23" class=""></div>
+        <div id="carre24" class=""></div>
+        <div id="carre25" class=""></div>
+        <div id="carre26" class=""></div>
+        <div id="carre27" class=""></div>
+        <div id="carre28" class=""></div>
+        <div id="carre29" class=""></div>
+        <div id="carre30" class=""></div>
+        <div id="carre31" class=""></div>
+        <div id="carre32" class=""></div>
+        <div id="carre33" class=""></div>
+        <div id="carre34" class=""></div>
+        <div id="carre35" class=""></div>
+        <div id="carre36" class=""></div>
+        <div id="carre37" class=""></div>
+        <div id="carre38" class=""></div>
+        <div id="carre39" class=""></div>
+        <div id="carre40" class=""></div>
+        <div id="carre41" class=""></div>
+        <div id="carre42" class=""></div>
+        <div id="carre43"><a href="#accueil">Jouer</div></a>
+        <div id="carre44" class=""></div>
+        <div id="carre45" class=""></div>
+        <div id="carre46" class=""></div>
+        <div id="carre47" class=""></div>
+        <div id="carre48" class=""></div>
+        <div id="carre49" class=""></div>
+        <div id="carre50" class=""></div>
+    </div>
+</script>
 <div id="page-chargement-application">
     <h1 class="titre"><span class="titre1">Kliq</span><span class="titre2">uens</span><span class="titre3">erie</span></h1>
     <div class="image-ecran-de-chargement">
         <div class="carres-ecran-de-chargement">
-            <div id="carre1" class="carre-ecran-de-chargement"></div>
-            <div id="carre2" class="carre-ecran-de-chargement"></div>
-            <div id="carre3" class="carre-ecran-de-chargement"></div>
-            <div id="carre4" class="carre-ecran-de-chargement"></div>
-            <div id="carre5" class="carre-ecran-de-chargement"></div>
-            <div id="carre6" class="carre-ecran-de-chargement"></div>
-            <div id="carre7" class="carre-ecran-de-chargement"></div>
-            <div id="carre8" class="carre-ecran-de-chargement"></div>
-            <div id="carre9" class="carre-ecran-de-chargement"></div>
+            <div id="carre01" class="carre-ecran-de-chargement"></div>
+            <div id="carre02" class="carre-ecran-de-chargement"></div>
+            <div id="carre03" class="carre-ecran-de-chargement"></div>
+            <div id="carre04" class="carre-ecran-de-chargement"></div>
+            <div id="carre05" class="carre-ecran-de-chargement"></div>
+            <div id="carre06" class="carre-ecran-de-chargement"></div>
+            <div id="carre07" class="carre-ecran-de-chargement"></div>
+            <div id="carre08" class="carre-ecran-de-chargement"></div>
+            <div id="carre09" class="carre-ecran-de-chargement"></div>
         </div>
     </div>
     <h3 class="chargement-ecran-de-chargement">Chargement ...</h3>
@@ -69,7 +125,7 @@
             </label>
         </div>
 
-        <a href="#" class='menu-ecran-parametre-lien'><input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'></a>
+        <a href="#accueil" class='menu-ecran-parametre-lien'><input class='menu-ecran-parametre' type='submit' name='sub' value='Menu'></a>
         <a href="#jeuRejouer" class='rejouer-ecran-parametre-lien'><input class='rejouer-ecran-parametre' type='submit' name='sub' value='Rejouer'></a>
         <div class="niveau-ecran-parametre">
             <h1 class="titre" id="score-ecran-parametre"></h1>
@@ -118,7 +174,7 @@
         </div>
     </div>
     <div class ="bouton-enregistrer-ecran-personnalisation-jeu">
-        <button id = "enregistrer-ecran-personnalisation-jeu" onclick="location.href='#';">
+        <button id = "enregistrer-ecran-personnalisation-jeu" onclick="location.href='#accueil';">
             <p id="texte-button-enregistrer-ecran-personnalisation-jeu">Enregistrer</p>
         </button>
     </div>

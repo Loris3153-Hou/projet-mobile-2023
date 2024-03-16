@@ -60,39 +60,39 @@ body {
     align-items: center;
 }
 
-#carre1{
+#carre01{
     animation: changerCouleur1 2s ease infinite;
 }
 
-#carre2{
+#carre02{
     animation: changerCouleur2 2s ease infinite;
 }
 
-#carre3{
+#carre03{
     animation: changerCouleur3 2s ease infinite;
 }
 
-#carre4{
+#carre04{
     animation: changerCouleur2 2s ease infinite;
 }
 
-#carre5{
+#carre05{
     animation: changerCouleur3 2s ease infinite;
 }
 
-#carre6{
+#carre06{
     animation: changerCouleur4 2s ease infinite;
 }
 
-#carre7{
+#carre07{
     animation: changerCouleur3 2s ease infinite;
 }
 
-#carre8{
+#carre08{
     animation: changerCouleur4 2s ease infinite;
 }
 
-#carre9{
+#carre09{
     animation: changerCouleur5 2s ease infinite;
 }
 

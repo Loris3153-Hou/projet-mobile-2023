@@ -7,11 +7,9 @@ class KliquencerieDAO {
     retournerLesVingtMeilleursScores() {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=retournerLesVingtMeilleursScores&token=' + this.token;
-            var frontendUrl = 'https://localhost/index.html';
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=retournerLesVingtMeilleursScores&token=' + this.token;
 
             xhr.open('GET', apiUrl, true);
-            xhr.setRequestHeader('Origin', frontendUrl);
 
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
@@ -35,11 +33,9 @@ class KliquencerieDAO {
     retournerUnJoueurParSonId(idJoueur) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParId&joueur='+ idJoueur +'&token=' + this.token;
-            var frontendUrl = 'https://localhost/index.html';
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParId&joueur='+ idJoueur +'&token=' + this.token;
 
             xhr.open('GET', apiUrl, true);
-            xhr.setRequestHeader('Origin', frontendUrl);
 
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
@@ -64,7 +60,7 @@ class KliquencerieDAO {
     miseAJourPseudo(idJoueur, NewPseudo) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLePseudo&newPseudo='+ NewPseudo +'&joueur='+ idJoueur +'&token=' + this.token;
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLePseudo&newPseudo='+ NewPseudo +'&joueur='+ idJoueur +'&token=' + this.token;
             var frontendUrl = 'https://localhost/index.html';
 
             xhr.open('GET', apiUrl, true);
@@ -88,7 +84,7 @@ class KliquencerieDAO {
     miseAJourScore(idJoueur, NewScore) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
-            var apiUrl = 'https://149.202.53.74/arbredusavoir.com/projetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLeScore&newScore='+ NewScore +'&joueur='+ idJoueur +'&token=' + this.token;
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLeScore&newScore='+ NewScore +'&joueur='+ idJoueur +'&token=' + this.token;
             var frontendUrl = 'https://localhost/index.html';
 
             xhr.open('GET', apiUrl, true);
