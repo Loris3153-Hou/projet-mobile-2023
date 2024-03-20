@@ -30,7 +30,7 @@ class VueAccueilJeu {
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
         //console.log("pseudo : " + this.joueurDAO.retournerUnJoueurParSonId(joueurCourant.getIdJoueur())[0].getPseudoJoueur())
-        //document.getElementById("input-text-pseudo").placeholder = this.joueurDAO.retournerUnJoueurParSonId(joueurCourant.getIdJoueur())[0].getPseudoJoueur();
+        document.getElementById("input-text-pseudo").value = this.joueurCourant.getPseudoJoueur();
 
         document.getElementById("formulaire-recuperation-pseudo").addEventListener("submit", evenement =>this.recupererPseudo(evenement));
 

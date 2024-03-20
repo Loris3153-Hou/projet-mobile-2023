@@ -3,6 +3,7 @@ class Joueur {
         this.idJoueur = "";
         this.pseudoJoueur = "";
         this.meilleurScoreJoueur = "";
+        this.token = "";
     }
 
     getIdJoueur() {
@@ -27,5 +28,13 @@ class Joueur {
 
     setMeilleurScoreJoueur(meilleurScoreJoueur) {
         this.meilleurScoreJoueur = meilleurScoreJoueur;
+    }
+
+    getTokenJoueur() {
+        return this.token;
+    }
+
+    setTokenJoueur(token) {
+        this.token = token;
     }
 }

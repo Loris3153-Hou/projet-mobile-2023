@@ -1,21 +1,19 @@
 class Application {
     constructor(window, vueAccueilJeu, vueJeu, vuePersonnalisationJeu, vueScore, vueAnimation, joueur) {
         this.window = window;
+        this.joueurDAO = new KliquencerieDAO();
         this.vueAccueilJeu = vueAccueilJeu;
         this.vueAnimation = vueAnimation;
         this.vueJeu = vueJeu;
         this.vuePersonnalisationJeu = vuePersonnalisationJeu;
         this.vueScore= vueScore;
         this.joueurCourant = joueur;
-        this.joueurCourant.setIdJoueur(1)
+        this.getJoueur();
 
         this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score));
         this.vueAccueilJeu.initialiserActionTransmettreCouleursTheme(listeCouleursTheme =>this.transmettreCouleursTheme(listeCouleursTheme))
         this.vueAccueilJeu.initialiserActionTransmettreListeImagesTheme(listeImagesTheme =>this.transmettreListeImagesTheme(listeImagesTheme))
         this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
-        this.vueAccueilJeu.recupererJoueur(this.joueurCourant)
-        this.vueScore.recupererJoueur(this.joueurCourant)
-        this.vueJeu.recupererJoueur(this.joueurCourant)
 
         this.window.addEventListener('hashchange', () =>this.naviguer());
 
@@ -74,6 +72,33 @@ class Application {
 
     transmettreListeImagesTheme(liste){
         this.vueJeu.initialiserListe(liste);
+    }
+
+    async getJoueur() {
+        //localStorage.removeItem('deviceID');
+        let deviceID = localStorage.getItem('deviceID');
+        let pseudo = "";
+        if (deviceID==null) {
+            deviceID = this.generateDeviceID();
+            let ID = deviceID.split("_")[1];
+            pseudo = 'Joueur_' + ID;
+            localStorage.setItem('deviceID', deviceID);
+            await this.joueurDAO.ajouterJoueur(pseudo, deviceID);
+        }
+        const listeDesJoueurs = await this.joueurDAO.getJoueurParToken(deviceID);
+        for (let joueur of listeDesJoueurs) {
+            this.joueurCourant.setIdJoueur(joueur.idJoueur);
+            this.joueurCourant.setPseudoJoueur(joueur.pseudoJoueur);
+            this.joueurCourant.setMeilleurScoreJoueur(joueur.meilleurScoreJoueur);
+            this.joueurCourant.setTokenJoueur(joueur.token);
+        }
+        this.vueAccueilJeu.recupererJoueur(this.joueurCourant);
+        this.vueScore.recupererJoueur(this.joueurCourant);
+        this.vueJeu.recupererJoueur(this.joueurCourant);
+    }
+
+    generateDeviceID() {
+        return 'device_' + Date.now();
     }
 }
 

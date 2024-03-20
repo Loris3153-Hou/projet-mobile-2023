@@ -61,10 +61,8 @@ class KliquencerieDAO {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
             var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLePseudo&newPseudo='+ NewPseudo +'&joueur='+ idJoueur +'&token=' + this.token;
-            var frontendUrl = 'https://localhost/index.html';
 
             xhr.open('GET', apiUrl, true);
-            xhr.setRequestHeader('Origin', frontendUrl);
 
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
@@ -85,10 +83,8 @@ class KliquencerieDAO {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
             var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=ModifierLeScore&newScore='+ NewScore +'&joueur='+ idJoueur +'&token=' + this.token;
-            var frontendUrl = 'https://localhost/index.html';
 
             xhr.open('GET', apiUrl, true);
-            xhr.setRequestHeader('Origin', frontendUrl);
 
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
@@ -105,7 +101,50 @@ class KliquencerieDAO {
         });
     }
 
+    ajouterJoueur(pseudo, token) {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=AjouterJoueur&pseudo='+ pseudo +'&tokenJoueur='+ token +'&token=' + this.token;
 
+            xhr.open('GET', apiUrl, true);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve();  // Resolve the promise when the operation is complete
+                    } else {
+                        reject('La requête a échoué.');  // Reject the promise on error
+                    }
+                }
+            };
+
+            xhr.send();
+        });
+    }
+
+    getJoueurParToken(token) {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            var apiUrl = 'https://arbre-du-savoir.shop/ProjetCordova/controlleurs/JoueurControlleur.php?methode=getJoueurParToken&tokenJoueur='+ token +'&token=' + this.token;
+
+            xhr.open('GET', apiUrl, true);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var response = xhr.responseText;
+                        console.log("test" + JSON.stringify(response));
+                        this.listeObjetsJoueurs = this.convertirJsonEnString(response);
+                        resolve(this.listeObjetsJoueurs);  // Resolve the promise when the operation is complete
+                    } else {
+                        reject('La requête a échoué.');  // Reject the promise on error
+                    }
+                }
+            };
+
+            xhr.send();
+        });
+    }
     convertirJsonEnString(jsonInput) {
         var listeObjetsJoueurs = JSON.parse(jsonInput).map(jsonJoueur => {
             const joueur = new Joueur();
