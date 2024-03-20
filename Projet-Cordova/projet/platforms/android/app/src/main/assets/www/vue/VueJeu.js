@@ -92,10 +92,11 @@ class VueJeu {
             }
         }
         else {
-            console.log("pseudo du Joueur : " + this.joueurCourant.getPseudoJoueur())
             this.joueurDAO.retournerUnJoueurParSonId(this.joueurCourant.getIdJoueur()).then(() => {
                 let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
                 for (let i = 0; i < listeDesJoueurs.length; i++) {
+                    console.log("test1 : " + this.joueurCourant.getPseudoJoueur());
+                    console.log("test2 : " + listeDesJoueurs[i].getPseudoJoueur());
                     if(this.joueurCourant.getPseudoJoueur() != listeDesJoueurs[i].getPseudoJoueur()){
                         this.joueurDAO.miseAJourPseudo(this.joueurCourant.getIdJoueur(), this.joueurCourant.getPseudoJoueur())
                         console.log("pseudo du Joueur : " + listeDesJoueurs[i].getPseudoJoueur())

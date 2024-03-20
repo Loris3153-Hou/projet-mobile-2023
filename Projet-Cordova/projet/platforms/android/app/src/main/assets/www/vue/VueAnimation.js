@@ -20,7 +20,7 @@ class VueAnimation {
                 ease: 'back.out',
                 duration: 0.2
             })
-            gsap.to('#carre' + inverse, {
+            gsap.to('#carre' + inverse, {ithub
                 rotate: '+=360',
                 ease: 'back.out',
                 duration: 0.2
