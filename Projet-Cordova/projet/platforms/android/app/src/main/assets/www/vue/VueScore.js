@@ -1,6 +1,7 @@
 class VueScore {
     constructor(){
         this.html = document.getElementById("html-vue-score").innerHTML;
+        this.htmlCelebration = document.getElementById("html-celebration-record-battu").innerHTML;
         this.score = 0;
         this.listeVingtPremiersNomsJoueurs = [];
         this.listeVingtPremiersScoreJoueurs = [];
@@ -44,7 +45,8 @@ class VueScore {
         listeClassementJoueurs.innerHTML = listeClassementJoueursHTMLRemplacement;
 
     }
-    afficher(){
+
+    async afficher(){
 
         this.joueurDAO.retournerLesVingtMeilleursScores().then(() => {
             let listeDesJoueurs = this.joueurDAO.getListeObjetsJoueurs();
@@ -54,13 +56,24 @@ class VueScore {
                 this.listeVingtPremiersNomsJoueurs.push(listeDesJoueurs[i].getPseudoJoueur());
                 this.listeVingtPremiersScoreJoueurs.push(listeDesJoueurs[i].getMeilleurScoreJoueur());
             }
-            document.getElementsByTagName("body")[0].innerHTML = this.html;
 
-            document.getElementById("score-joueur-courant").innerHTML = this.score;
-            this.afficherScoresVingtPremiersJoueurs();
+
         });
 
+        console.log("lala : " + this.recordPersonnelBattu);
 
+        if (this.recordPersonnelBattu == true) {
+            document.getElementsByTagName("body")[0].innerHTML = this.htmlCelebration;
+            await this.sleep(3000);
+        }
+
+        document.getElementsByTagName("body")[0].innerHTML = this.html;
+        document.getElementById("score-joueur-courant").innerHTML = this.score;
+        this.afficherScoresVingtPremiersJoueurs();
+    }
+
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
 

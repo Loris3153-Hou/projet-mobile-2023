@@ -102,8 +102,8 @@ class VueJeu {
                         console.log("pseudo du Joueur : " + listeDesJoueurs[i].getPseudoJoueur())
                     }
                     if(this.score > listeDesJoueurs[i].getMeilleurScoreJoueur()){
-                        this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), this.score)
                         this.recordPersonnelBattu = true;
+                        this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), this.score);
                     }
 
                 }

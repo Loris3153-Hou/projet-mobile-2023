@@ -9,7 +9,7 @@ class Application {
         this.joueurCourant = joueur;
         this.joueurCourant.setIdJoueur(1)
 
-        this.vueJeu.initialiserActionAllerVersPageScore(score =>this.allerVersPageScore(score, recordPersonnelBattu));
+        this.vueJeu.initialiserActionAllerVersPageScore((score, recordPersonnelBattu) =>this.allerVersPageScore(score, recordPersonnelBattu));
         this.vueAccueilJeu.initialiserActionTransmettreCouleursTheme(listeCouleursTheme =>this.transmettreCouleursTheme(listeCouleursTheme))
         this.vueAccueilJeu.initialiserActionTransmettreListeImagesTheme(listeImagesTheme =>this.transmettreListeImagesTheme(listeImagesTheme))
         this.vuePersonnalisationJeu.initialiserActionTransmettreListe(liste=>this.transmettreListe(liste));
