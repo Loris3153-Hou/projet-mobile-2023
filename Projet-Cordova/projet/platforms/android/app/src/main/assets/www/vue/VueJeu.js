@@ -10,6 +10,7 @@ class VueJeu {
         this.listeCouleursTheme = null;
         this.joueurCourant = null
         this.joueurDAO = new KliquencerieDAO();
+        this.recordPersonnelBattu = false;
     }
 
     recupererJoueur(joueurCourant){
@@ -102,12 +103,13 @@ class VueJeu {
                     }
                     if(this.score > listeDesJoueurs[i].getMeilleurScoreJoueur()){
                         this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), this.score)
+                        this.recordPersonnelBattu = true;
                     }
 
                 }
             });
 
-            setTimeout(() => this.actionAllerVersPageScore(this.score), 2000);
+            setTimeout(() => this.actionAllerVersPageScore(this.score, this.recordPersonnelBattu), 2000);
         }
     }
 

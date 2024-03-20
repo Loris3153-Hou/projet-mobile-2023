@@ -6,7 +6,7 @@ class VueScore {
         this.listeVingtPremiersScoreJoueurs = [];
         this.joueurCourant = null
         this.joueurDAO = new KliquencerieDAO();
-
+        this.recordPersonnelBattu = null;
 
     }
 
@@ -14,8 +14,9 @@ class VueScore {
         this.joueurCourant = joueurCourant
     }
 
-    recupererScoreJoueurCourant(score){
+    recupererScoreJoueurCourant(score, recordPersonnelBattu){
         this.score = score;
+        this.recordPersonnelBattu = recordPersonnelBattu;
     }
 
     afficherScoresVingtPremiersJoueurs(){
