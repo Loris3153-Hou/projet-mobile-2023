@@ -61,10 +61,28 @@ class VueScore {
         });
 
         console.log("lala : " + this.recordPersonnelBattu);
+        await this.sleep(300);
 
         if (this.recordPersonnelBattu == true) {
             document.getElementsByTagName("body")[0].innerHTML = this.htmlCelebration;
-            await this.sleep(3000);
+
+            gsap.registerPlugin(MotionPathPlugin);
+
+            gsap.set(".astronaut", {scale: 0.5, autoAlpha: 1});
+
+            gsap.to(".astronaut", {
+              duration: 5,
+              ease: "power1.inOut",
+              immediateRender: true,
+              motionPath: {
+                path: "#path",
+                align: "#path",
+                alignOrigin: [0.5, 0.5],
+                autoRotate: 90
+              }
+            });
+
+            await this.sleep(6000);
         }
 
         document.getElementsByTagName("body")[0].innerHTML = this.html;

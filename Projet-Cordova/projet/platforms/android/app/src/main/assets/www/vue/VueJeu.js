@@ -103,7 +103,7 @@ class VueJeu {
                     }
                     if(this.score > listeDesJoueurs[i].getMeilleurScoreJoueur()){
                         this.recordPersonnelBattu = true;
-                        this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), this.score);
+                        this.joueurDAO.miseAJourScore(this.joueurCourant.getIdJoueur(), 1);
                     }
 
                 }

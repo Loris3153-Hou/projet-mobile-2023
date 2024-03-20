@@ -1,4 +1,4 @@
-body {
+/*body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -7,4 +7,34 @@ body {
     color: white;
     text-align: center;
     background-color: black;
+}*/
+
+
+body, html {
+  padding: 0;
+  margin: 0
 }
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+#motionPath {
+  overflow: visible;
+  height: 100%;
+  max-width: 100%;
+}
+
+#motionPath path {
+  stroke-width: 2;
+  stroke: gray;
+}
+
+#motionPath .astronaut {
+  visibility: hidden;
+}
+
